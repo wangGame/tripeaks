@@ -1,0 +1,1 @@
+GamePixels.txt and GamePixelsProportional.txt file was exported from and can be imported back to [BitFontMaker2](https://www.pentacom.jp/pentacom/bitfontmaker2/).

@@ -1,0 +1,12 @@
+apply plugin: "java"
+
+dependencies {
+//    compile project(':core')
+
+//    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.badlogicgames.ashley:ashley:$ashleyVersion"
+}
+
+sourceSets.main.java.srcDirs = [
+        "src/","utilssrc",
+]
