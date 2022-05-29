@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.kw.gdx.ads.Constant;
 
 public class Layer {
     public static Image getShadow(){
@@ -16,6 +17,7 @@ public class Layer {
         }
         Image shadow= new Image(new Texture(pixmap));
         shadow.setTouchable(Touchable.disabled);
+        shadow.setSize(Constant.GAMEWIDTH,Constant.GAMEHIGHT);
         return shadow;
     }
 }

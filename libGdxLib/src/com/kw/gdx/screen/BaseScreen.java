@@ -19,6 +19,7 @@ import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.AnnotationInfo;
 import com.kw.gdx.annotation.ScreenResource;
 import com.kw.gdx.cocosload.CocosResource;
+import com.kw.gdx.dialog.DialogManager;
 import com.kw.gdx.dialog.base.BaseDialog;
 
 import java.lang.reflect.Constructor;
@@ -31,8 +32,9 @@ public class BaseScreen implements Screen {
     protected float offsetY;
     protected float offsetX;
     protected boolean back;
-    private BaseGame game;
+    protected BaseGame game;
     private BannerView bannerView;
+    protected DialogManager dialogManager;
 
     public BaseScreen(BaseGame game){
         this.game = game;
@@ -42,6 +44,7 @@ public class BaseScreen implements Screen {
         bannerView = new BannerView();
         bannerView.setPosition(Constant.GAMEWIDTH /2 ,-offsetY, Align.bottom);
 //        stage.addActor(bannerView);
+        dialogManager = new DialogManager(stage);
     }
 
     protected void initAnnotation(){
@@ -95,6 +98,7 @@ public class BaseScreen implements Screen {
             public boolean keyDown(InputEvent event, int keycode) {
                 if ((keycode == Input.Keys.ESCAPE || keycode == Input.Keys.BACK)) {
                     back = true;
+                    back();
                 }
                 return super.keyDown(event, keycode);
             }
@@ -102,7 +106,8 @@ public class BaseScreen implements Screen {
     }
 
     protected BaseDialog back() {
-//        BaseDialog back = RiderGame.instence().getDialogManager().back();
+        back = false;
+        BaseDialog back = dialogManager.back();
         return null;
     }
 
@@ -167,5 +172,6 @@ public class BaseScreen implements Screen {
     public <T extends Actor> T findActor(String name){
         return rootView.findActor(name);
     }
+
 }
 

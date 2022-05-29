@@ -17,11 +17,14 @@ import java.util.ArrayList;
 
 import ogz.tripeaks.card.CardGroup;
 import ogz.tripeaks.data.GameData;
+import ogz.tripeaks.dialog.FailedDialog;
+import ogz.tripeaks.dialog.SuccessDialog;
 
 public class GameScreen extends BaseScreen {
     private int current=0;
     private CardGroup baseGroup;
     private Queue<CardGroup> stack = new Queue<>();
+    private ArrayList<CardGroup> packAll = new ArrayList<>();
 
     public GameScreen(BaseGame game) {
         super(game);
@@ -47,9 +50,27 @@ public class GameScreen extends BaseScreen {
                     public void click(CardGroup cardGroup) {
                         int ans1 = (cardGroup.packNum() + 1) % 13;
                         int ans2 = (cardGroup.packNum() - 1) % 13;
+                        ans1 = ans1 < 0 ? ans1+13:ans1;
+                        ans2 = ans2 < 0 ? ans2+13:ans2;
+                        System.out.println(cardGroup.packNum()+"  "+ans1);
+                        System.out.println(cardGroup.packNum()+"  "+ans2);
+                        System.out.println(current);
                         if (ans1 == current || ans2 == current) {
                             update(objects, cardGroup);
                             current = cardGroup.packNum();
+                        }
+                        if (packAll.size() == 0){
+                            System.out.println("success");
+                            dialogManager.showDialog(new SuccessDialog(new Runnable(){
+                                @Override
+                                public void run() {
+                                    setScreen(new GameScreen(game));
+                                }
+                            }));
+                            return;
+                        }
+                        if (stack.size<=0){
+                            checkPeaks();
                         }
                     }
                 });
@@ -58,6 +79,7 @@ public class GameScreen extends BaseScreen {
                 objects[i][i1] = btn;
                 btn.setPosX(i1);
                 btn.setPosY(i);
+                packAll.add(btn);
             }
         }
         int length = ints.length;
@@ -101,12 +123,20 @@ public class GameScreen extends BaseScreen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);
+                if (stack.size<=0)return;
                 CardGroup pop = stack.removeFirst();
-                if (pop==null)return;
+                if (pop==null){
+                    System.out.println("failed");
+                    return;
+                }
                 pop.remove();
                 baseGroup.update(pop.getIndex());
                 current = pop.packNum();
-                stack.first().onlySelect(true);
+                if (stack.size>0) {
+                    stack.first().onlySelect(true);
+                }else {
+                    checkPeaks();
+                }
             }
         });
         stack.first().onlySelect(true);
@@ -114,11 +144,28 @@ public class GameScreen extends BaseScreen {
 //        extracted(data);
     }
 
+    public void checkPeaks(){
+        for (CardGroup cardGroup : packAll) {
+            if (!cardGroup.isSelect())continue;
+            int ans1 = (cardGroup.packNum() + 1) % 13;
+            int ans2 = (cardGroup.packNum() - 1) % 13;
+            ans1 = ans1 < 0 ? ans1 + 13 : ans1;
+            ans2 = ans2 < 0 ? ans2 + 13 : ans2;
+            if (ans1 == current || ans2 == current) {
+                return;
+            }
+        }
+        dialogManager.showDialog(new FailedDialog());
+//        System.out.println("failed ---------------");
+        return;
+    }
+
     public void update(CardGroup[][] cardGroups,CardGroup currentGroup){
         int posx = currentGroup.getPosX()-1;
         int posy = currentGroup.getPosY()-1;
         cardGroups[posy+1][posx+1] = null;
         currentGroup.remove();
+        packAll.remove(currentGroup);
         baseGroup.update(currentGroup.getIndex());
         if (posy>=0){
             boolean changePack = true;
@@ -157,19 +204,7 @@ public class GameScreen extends BaseScreen {
                     }
                 }
             }
-
         }
-
-//        if (posy>0||posx>0){
-//            CardGroup cardGroup = cardGroups[posy - 1][posx - 1];
-//            if (cardGroup!=null){
-//                if (posx-2>=0) {
-//                    CardGroup cardGroup1 = cardGroups[posy][posx - 2];
-//                    if (cardGroup1==null)
-//                    cardGroup1.select(true);
-//                }
-//            }
-//        }
 
     }
 

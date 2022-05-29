@@ -27,11 +27,13 @@ public class BaseDialog extends Group {
     public BaseDialog(String dialogpath){
         if (dialogpath!=null){
             dialogGroup = CocosResource.loadFile(dialogpath);
+            setSize(dialogGroup.getWidth(),dialogGroup.getHeight());
         }else {
             dialogGroup = new Group();
+            dialogGroup.setSize(Constant.GAMEWIDTH,Constant.GAMEHIGHT);
         }
-        addActor(dialogGroup);
         setSize(dialogGroup.getWidth(),dialogGroup.getHeight());
+        addActor(dialogGroup);
         setY(Constant.GAMEHIGHT/2, Align.center);
         setX(Constant.GAMEWIDTH/2,Align.center);
         offsetX = (Constant.GAMEWIDTH - Constant.STDWIDTH)/2;

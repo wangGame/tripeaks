@@ -16,6 +16,7 @@ public class CardGroup extends Group {
     private int posx;
     private int posy;
     private int index;
+    private boolean select;
 
     public CardGroup(Integer integer){
         this.index = integer;
@@ -47,6 +48,7 @@ public class CardGroup extends Group {
 
 
     public void select(boolean select){
+        this.select = select;
         if (select){
             setTouchable(Touchable.enabled);
             imageFront.setVisible(false);
@@ -54,7 +56,12 @@ public class CardGroup extends Group {
         }
     }
 
+    public boolean isSelect() {
+        return select;
+    }
+
     public void onlySelect(boolean select){
+        this.select = select;
         if (select){
             imageFront.setVisible(false);
             cardData.toFront();

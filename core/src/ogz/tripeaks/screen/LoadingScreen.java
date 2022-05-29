@@ -35,7 +35,7 @@ public class LoadingScreen extends BaseScreen {
 //        }
 //        Image image = new Image(new Texture(pixmap));
 ////        addActor(image);
-        stage.addAction(Actions.delay(3,Actions.run(()->{
+        stage.addAction(Actions.delay(0,Actions.run(()->{
             setScreen(MainScreen.class);
         })));
 

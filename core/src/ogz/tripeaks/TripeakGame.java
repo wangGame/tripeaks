@@ -13,7 +13,7 @@ public class TripeakGame extends BaseGame {
     @Override
     protected void loadingView() {
         super.loadingView();
-        Constant.viewColor.set(0.8F,0.2F,0.2F,1);
+        Constant.viewColor.set(35.0F/255F,36.0F/255F,51.0F/255F,1);
         setScreen(new LoadingScreen(this));
     }
 

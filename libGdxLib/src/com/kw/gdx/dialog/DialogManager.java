@@ -29,7 +29,7 @@ public class DialogManager {
         hasShadow = true;
         shadow = Layer.getShadow();
         shadow.setColor(0,0,0,0.0F);
-        shadow.addAction(Actions.alpha(0.75F,time));
+        shadow.addAction(Actions.alpha(0.25F,time));
         stage.addActor(shadow);
         stage.getRoot().findActor("stg");
         shadow.setName("shadow");
@@ -84,23 +84,23 @@ public class DialogManager {
 
     public void showDialog(Group parent,BaseDialog dialog){
         if (array.size>0) {
-//            if (dialog.getType() == Type.closeOldShowCurr) {
-//                BaseDialog peek = array.pop();
-//                peek.close();
-//                parent.addActor(dialog);
-//                dialog.show();
-//                array.add(dialog);
-//            }else if (dialog.getType() == Type.hideOldShowCurr){
-//                BaseDialog peek = array.peek();
-//                peek.hide();
-//                parent.addActor(dialog);
-//                dialog.show();
-//                array.add(dialog);
-//            }else if (dialog.getType() == Type.NotHideShowCurr){
-//                parent.addActor(dialog);
-//                dialog.show();
-//                array.add(dialog);
-//            }
+            if (dialog.getType() == Type.closeOldShowCurr) {
+                BaseDialog peek = array.pop();
+                peek.close();
+                parent.addActor(dialog);
+                dialog.show();
+                array.add(dialog);
+            }else if (dialog.getType() == Type.hideOldShowCurr){
+                BaseDialog peek = array.peek();
+                peek.hide();
+                parent.addActor(dialog);
+                dialog.show();
+                array.add(dialog);
+            }else if (dialog.getType() == Type.NotHideShowCurr){
+                parent.addActor(dialog);
+                dialog.show();
+                array.add(dialog);
+            }
         }else {
             parent.addActor(dialog);
             array.add(dialog);

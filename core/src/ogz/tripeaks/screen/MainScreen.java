@@ -16,6 +16,8 @@ import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 
 import ogz.tripeaks.btn.MyImageButton;
+import ogz.tripeaks.dialog.FailedDialog;
+import ogz.tripeaks.dialog.SuccessDialog;
 
 public class MainScreen extends BaseScreen {
     public MainScreen(BaseGame game) {
@@ -68,6 +70,12 @@ public class MainScreen extends BaseScreen {
             }
         });
 
+        dialogManager.showDialog(new SuccessDialog(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }));
     }
 
     private MyImageButton getBtn(String text) {

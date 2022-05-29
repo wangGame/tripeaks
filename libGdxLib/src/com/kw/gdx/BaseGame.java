@@ -10,6 +10,7 @@ import com.esotericsoftware.spine.SkeletonRenderer;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.AnnotationInfo;
 import com.kw.gdx.annotation.GameInfo;
+import com.kw.gdx.dialog.DialogManager;
 
 
 public class BaseGame extends Game {
@@ -40,6 +41,7 @@ public class BaseGame extends Game {
 
     private void initInstance(){
         Gdx.input.setCatchBackKey(true);
+
     }
 
     private void initViewport() {
