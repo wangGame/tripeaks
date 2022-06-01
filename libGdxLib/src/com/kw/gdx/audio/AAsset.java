@@ -4,9 +4,9 @@ import com.badlogic.gdx.assets.AssetManager;
 
 public abstract class AAsset {
     protected String name;
-    private static AssetManager assetManager;
+//    private static AssetManager assetManager;
     public static MusicAsset registerMusicAsset(String name,AssetManager am) {
-        assetManager = am;
+//        assetManager = am;
         MusicAsset ma = new MusicAsset(name,am);
         return ma;
     }

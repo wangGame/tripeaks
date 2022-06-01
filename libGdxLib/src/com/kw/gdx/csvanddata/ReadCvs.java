@@ -18,8 +18,8 @@ public class ReadCvs {
         arry.add(boolean.class);
     }
 
-    public static void main(String[] args) throws Exception {
-    }
+//    public static void main(String[] args) throws Exception {
+//    }
     /**
      * 直接通过字段赋值
      * @param array   数据保存的集合

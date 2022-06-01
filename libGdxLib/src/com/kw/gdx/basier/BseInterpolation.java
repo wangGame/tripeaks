@@ -1,9 +1,11 @@
 package com.kw.gdx.basier;
 
-
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 
+/**
+ * 主要用于spine动画
+ */
 public class BseInterpolation extends Interpolation {
     private float[] curves = new float[18];
 

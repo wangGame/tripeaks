@@ -57,7 +57,7 @@ public class AudioProcess {
     public static void unloadSound(String soundName){
         SoundAsset soundAsset = soundAssets.get(soundName);
         if(soundAsset!=null) {
-//            soundAsset.dispose(RiderGame.instence().getAssetManager());
+            soundAsset.dispose(null);
             soundAssets.remove(soundName);
         }
     }
@@ -111,7 +111,7 @@ public class AudioProcess {
         }
     }
 
-    public static void stopSoundLoop1(String name) {
+    public static void stopMusicLoop(String name) {
         if (name != null) {
             if (musicAssets.get(name) != null) {
                 MusicAsset musicAsset = musicAssets.get(name);

@@ -48,9 +48,7 @@ public class ConvertUtil {
     }
 
     public final static long convertToLong(Object value, long defaultValue) {
-        if (value == null || "".equals(value.toString().trim())) {
-            return defaultValue;
-        }
+        if (value == null || "".equals(value.toString().trim())) return defaultValue;
         try {
             return Long.valueOf(value.toString());
         } catch (Exception e) {
@@ -64,9 +62,7 @@ public class ConvertUtil {
 
 
     public final static boolean convertToBoolean(Object value, boolean defaultValue) {
-        if (value == null) {
-            return defaultValue;
-        }
+        if (value == null) return defaultValue;
         try {
             return Boolean.valueOf(value.toString());
         } catch (Exception e) {

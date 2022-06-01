@@ -10,6 +10,8 @@ public class DesktopLauncher {
         float scale = 4.0F;
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
         config.title="TriPeaks";
+        config.x = 0;
+        config.y = 0;
 //        config.setWindowIcon(
 //                "images/icon16.png",
 //                "images/icon24.png",

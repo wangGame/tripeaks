@@ -10,27 +10,26 @@ public class CocosResource {
 
     public static Group loadFile(String resourcePath){
         if (resourcePath!=null) {
-            if (Asset.getAsset().assetManager.isLoaded(resourcePath)){
-                ManagerUIEditor managerUIEditor1 = Asset.assetManager.get(resourcePath);
-                return managerUIEditor1.createGroup();
-            }else {
+            if (!Asset.getAsset().assetManager.isLoaded(resourcePath)){
                 ManagerUILoader.ManagerUIParameter managerUIParameter1 =
                         new ManagerUILoader.ManagerUIParameter("ccs/", Asset.assetManager);
                 Asset.assetManager.load(resourcePath, ManagerUIEditor.class, managerUIParameter1);
                 Asset.assetManager.finishLoading();
-                ManagerUIEditor managerUIEditor1 = Asset.assetManager.get(resourcePath);
-                return managerUIEditor1.createGroup();
             }
+            ManagerUIEditor managerUIEditor = Asset.assetManager.get(resourcePath);
+            return managerUIEditor.createGroup();
         }
         return new Group();
     }
 
     public static void loadFile1(String resourcePath){
         if (resourcePath!=null) {
-            ManagerUILoader.ManagerUIParameter managerUIParameter1 =
-                    new ManagerUILoader.ManagerUIParameter("ccs/", Asset.assetManager);
-            Asset.assetManager.load(resourcePath, ManagerUIEditor.class, managerUIParameter1);
-            Asset.assetManager.finishLoading();
+            if (!Asset.getAsset().assetManager.isLoaded(resourcePath)) {
+                ManagerUILoader.ManagerUIParameter managerUIParameter1 =
+                        new ManagerUILoader.ManagerUIParameter("ccs/", Asset.assetManager);
+                Asset.assetManager.load(resourcePath, ManagerUIEditor.class, managerUIParameter1);
+                Asset.assetManager.finishLoading();
+            }
         }
     }
 

@@ -19,19 +19,13 @@ import java.util.HashMap;
  */
 public class CsvReader {
     private Reader inputStream = null;
-
     private String fileName = null;
-
     // this holds all the values for switches that the user is allowed to set
     private UserSettings userSettings = new UserSettings();
-
     private Charset charset = null;
-
     private boolean useCustomRecordDelimiter = false;
-
     // this will be our working buffer to hold data chunks
     // read in from the data file
-
     private DataBuffer dataBuffer = new DataBuffer();
 
     private ColumnBuffer columnBuffer = new ColumnBuffer();

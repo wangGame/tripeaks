@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 import com.kw.gdx.BaseGame;
+import com.kw.gdx.ads.BannerManager;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.screen.BaseScreen;
@@ -27,8 +28,11 @@ public class MainScreen extends BaseScreen {
     private MyImageButton startBtn;
     private MyImageButton selectBtn;
     private MyImageButton exitBtn;
+
     @Override
     public void initView() {
+//        模拟banner
+//        BannerManager.setVisible(true);
         Image bg = new Image(new Texture("main/images/light_title.png"));
         addActor(bg);
         bg.setSize(Constant.GAMEWIDTH,Constant.GAMEHIGHT);

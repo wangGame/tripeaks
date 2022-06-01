@@ -135,18 +135,7 @@ public class Asset implements Disposable {
     }
 
     public Sprite getSprite(String path){
-        if (!Gdx.files.internal(path).exists()){
-            NLog.e("%s resouce not exist",path);
-            return null;
-        }
-        if (!assetManager.isLoaded(path)) {
-            TextureLoader.TextureParameter parameter = new TextureLoader.TextureParameter();
-            parameter.magFilter = Texture.TextureFilter.Linear;
-            parameter.minFilter = Texture.TextureFilter.Linear;
-            assetManager.load(path, Texture.class,parameter);
-            assetManager.finishLoading();
-        }
-        Texture texture = assetManager.get(path, Texture.class);
+        Texture texture = getTexture(path);
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         Sprite sprite = new Sprite(texture);
         return sprite;
