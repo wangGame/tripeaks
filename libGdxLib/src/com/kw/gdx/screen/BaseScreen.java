@@ -4,16 +4,19 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.kw.gdx.BaseGame;
+import com.kw.gdx.ads.BannerManager;
 import com.kw.gdx.ads.BannerView;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.AnnotationInfo;
@@ -33,17 +36,21 @@ public class BaseScreen implements Screen {
     protected float offsetX;
     protected boolean back;
     protected BaseGame game;
-    private BannerView bannerView;
     protected DialogManager dialogManager;
+//    private Image o;
+    private BannerManager bannerManager;
 
     public BaseScreen(BaseGame game){
         this.game = game;
         stage = new Stage(getStageViewport(), getBatch());
         offsetY = (Constant.GAMEHIGHT - Constant.HIGHT)/2;
         offsetX = (Constant.GAMEWIDTH - Constant.WIDTH)/2;
-        bannerView = new BannerView();
-        bannerView.setPosition(Constant.GAMEWIDTH /2 ,-offsetY, Align.bottom);
-//        stage.addActor(bannerView);
+        bannerManager = new BannerManager(stage);
+        bannerManager.init(-offsetY);
+        bannerManager.setVisible(false);
+//        o = new Image(new Texture(Gdx.files.internal("main/badlogic.jpg")));
+//        stage.addActor(o);
+
         dialogManager = new DialogManager(stage);
     }
 
@@ -116,6 +123,8 @@ public class BaseScreen implements Screen {
         stage.act();
         stage.draw();
 //        banner.toFront();
+        bannerManager.toFront();
+//        o.toFront();
     }
 
     @Override

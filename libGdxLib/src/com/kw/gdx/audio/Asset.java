@@ -1,7 +1,9 @@
 package com.kw.gdx.audio;
 
+import com.badlogic.gdx.utils.I18NBundle;
 import com.esotericsoftware.spine.SkeletonRenderer;
 import com.kw.gdx.annotation.FtResource;
+import com.kw.gdx.annotation.I18BundleAnnotation;
 import com.kw.gdx.annotation.SpineResource;
 import com.kw.gdx.annotation.TextureReginAnnotation;
 import com.badlogic.gdx.Gdx;
@@ -68,10 +70,10 @@ public class Asset implements Disposable {
                     }
                 }else if (annotation instanceof TextureReginAnnotation){
                     TextureReginAnnotation textureReginAnnotation = (TextureReginAnnotation)annotation;
-                    if (annotation!=null) {
-                        TextureReginAnnotation textureReginAnnotation1 = textureReginAnnotation;
-                        assetManager.load(textureReginAnnotation1.value(), TextureAtlas.class);
-                    }
+                    assetManager.load(textureReginAnnotation.value(), TextureAtlas.class);
+                }else if (annotation instanceof I18BundleAnnotation){
+                    I18BundleAnnotation i18BundleAnnotation = (I18BundleAnnotation) annotation;
+                    assetManager.load(i18BundleAnnotation.value(), I18NBundle.class);
                 }
             }
         }
@@ -94,6 +96,13 @@ public class Asset implements Disposable {
                     TextureReginAnnotation reginAnnotation = (TextureReginAnnotation) annotation;
                     try {
                         declaredField.set(ob,assetManager.get(reginAnnotation.value(), TextureAtlas.class));
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                }else if (annotation instanceof I18BundleAnnotation){
+                    I18BundleAnnotation i18BundleAnnotation = (I18BundleAnnotation) annotation;
+                    try {
+                        declaredField.set(ob,assetManager.get(i18BundleAnnotation.value(), I18NBundle.class));
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }

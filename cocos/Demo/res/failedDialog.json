@@ -1,0 +1,28 @@
+{
+  "ID": "13a8c368-a7fd-41f1-90fb-0fb485bda21e",
+  "Version": "3.10.0.0",
+  "Name": "failedDialog",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 32,
+        "Size": {
+          "X": 300.0,
+          "Y": 168.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

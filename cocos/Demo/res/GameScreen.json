@@ -1,0 +1,257 @@
+{
+  "ID": "9a7168a9-590d-4715-9b52-602957661535",
+  "Version": "3.10.0.0",
+  "Name": "GameScreen",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 18,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 35,
+              "G": 36,
+              "B": 51
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 19,
+            "ActionTag": 895890637,
+            "Size": {
+              "X": 300.0,
+              "Y": 168.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "images/cards/dark_card.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 24.49,
+              "Y": 23.11
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0816,
+              "Y": 0.1376
+            },
+            "PreSize": {
+              "X": 0.0833,
+              "Y": 0.2202
+            },
+            "LeftMargin": 11.99,
+            "RightMargin": 263.01,
+            "TopMargin": 126.39,
+            "BottomMargin": 4.61,
+            "Tag": 20,
+            "ActionTag": 596416140,
+            "Size": {
+              "X": 25.0,
+              "Y": 37.0
+            },
+            "Name": "chexiao",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "images/cards/dark_card.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 53.0,
+              "Y": 23.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1767,
+              "Y": 0.1369
+            },
+            "PreSize": {
+              "X": 0.0833,
+              "Y": 0.2202
+            },
+            "LeftMargin": 40.5,
+            "RightMargin": 234.5,
+            "TopMargin": 126.5,
+            "BottomMargin": 4.5,
+            "Tag": 21,
+            "ActionTag": -1187103431,
+            "Size": {
+              "X": 25.0,
+              "Y": 37.0
+            },
+            "Name": "base",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "images/cards/dark_card.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 249.0,
+              "Y": 23.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.83,
+              "Y": 0.1369
+            },
+            "PreSize": {
+              "X": 0.0833,
+              "Y": 0.2202
+            },
+            "LeftMargin": 236.5,
+            "RightMargin": 38.5,
+            "TopMargin": 126.5,
+            "BottomMargin": 4.5,
+            "Tag": 22,
+            "ActionTag": -689674268,
+            "Size": {
+              "X": 25.0,
+              "Y": 37.0
+            },
+            "Name": "paidui",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "images/cards/dark_card.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 276.0,
+              "Y": 23.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.92,
+              "Y": 0.1369
+            },
+            "PreSize": {
+              "X": 0.0833,
+              "Y": 0.2202
+            },
+            "LeftMargin": 263.5,
+            "RightMargin": 11.5,
+            "TopMargin": 126.5,
+            "BottomMargin": 4.5,
+            "Tag": 23,
+            "ActionTag": -147695893,
+            "Size": {
+              "X": 25.0,
+              "Y": 37.0
+            },
+            "Name": "addpeak",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 300.0,
+          "Y": 168.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "images/cards/dark_card.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}
