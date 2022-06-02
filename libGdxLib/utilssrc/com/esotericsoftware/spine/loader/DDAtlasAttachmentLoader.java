@@ -1,4 +1,4 @@
-package com.kw.gdx.spineactor;
+package com.esotericsoftware.spine.loader;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.Skin;

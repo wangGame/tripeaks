@@ -15,6 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 import com.kw.gdx.BaseGame;
 import com.kw.gdx.ads.BannerManager;
 import com.kw.gdx.ads.BannerView;
@@ -37,7 +38,6 @@ public class BaseScreen implements Screen {
     protected boolean back;
     protected BaseGame game;
     protected DialogManager dialogManager;
-//    private Image o;
     private BannerManager bannerManager;
 
     public BaseScreen(BaseGame game){
@@ -48,9 +48,6 @@ public class BaseScreen implements Screen {
         bannerManager = new BannerManager(stage);
         bannerManager.init(-offsetY);
         bannerManager.setVisible(false);
-//        o = new Image(new Texture(Gdx.files.internal("main/badlogic.jpg")));
-//        stage.addActor(o);
-
         dialogManager = new DialogManager(stage);
     }
 
@@ -62,7 +59,7 @@ public class BaseScreen implements Screen {
         return game.getBatch();
     }
 
-    private ExtendViewport getStageViewport() {
+    private Viewport getStageViewport() {
         return game.getStageViewport();
     }
 
@@ -144,15 +141,14 @@ public class BaseScreen implements Screen {
 
     @Override
     public void hide() {
-//        observer.clear();
-//        CocosResource.unLoadFile(viewpath);
+
     }
 
     @Override
     public void dispose() {
         stage.dispose();
         if (viewpath!=null) {
-//            CocosRes.unLoadFile(viewpath);
+            CocosResource.unLoadFile(viewpath);
         }
     }
 

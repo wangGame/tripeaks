@@ -30,11 +30,8 @@ public class FrameBufferDemo extends Group{
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
-//        super.draw(batch, parentAlpha);
         frameBuffer.begin();
-//        super.draw(batch, parentAlpha);
         group.draw(batch,parentAlpha);
         frameBuffer.end();
-
     }
 }

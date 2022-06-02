@@ -4,6 +4,8 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.Align;
 import com.kw.gdx.ads.Constant;
+import com.kw.gdx.audio.AudioProcess;
+import com.kw.gdx.audio.AudioType;
 import com.kw.gdx.basier.BseInterpolation;
 import com.kw.gdx.cocosload.CocosResource;
 import com.kw.gdx.dialog.DialogManager;
@@ -17,13 +19,16 @@ public class BaseDialog extends Group {
     protected float offsetX;
     protected float offsetY;
     protected float shadowTime = 0.1667F;
+    protected boolean playOpenAudio = false;
+    protected String openMusic = AudioType.MENU_MUSIC1;
+    protected boolean playCloseAudio = false;
+    protected String closeMusic = AudioType.MENU_MUSIC1;
 
 
     public float getShadowTime() {
         return shadowTime;
     }
 
-    public BaseDialog(){}
     public BaseDialog(String dialogpath){
         if (dialogpath!=null){
             dialogGroup = CocosResource.loadFile(dialogpath);
@@ -54,8 +59,16 @@ public class BaseDialog extends Group {
         );
     }
 
-    protected void playAudio(){
-//        AudioProcess.playSound(AudioType.TABPOPUP);
+    protected void playOpenAudio(){
+        if (playOpenAudio){
+            AudioProcess.playSound(openMusic);
+        }
+    }
+
+    protected void playCloseAudio(){
+        if (playCloseAudio){
+            AudioProcess.playSound(closeMusic);
+        }
     }
 
     public DialogManager.Type getType() {
@@ -63,8 +76,7 @@ public class BaseDialog extends Group {
     }
 
     public void show() {
-
-//        playAudio();
+        playOpenAudio();
         setAphlaZero();
 //        AudioProcess.playSound(AudioType.TABPOPUP);
         setOrigin(Align.center);

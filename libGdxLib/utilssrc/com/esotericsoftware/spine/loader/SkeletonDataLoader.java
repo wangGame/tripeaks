@@ -1,4 +1,4 @@
-package com.kw.gdx.spineactor;
+package com.esotericsoftware.spine.loader;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;

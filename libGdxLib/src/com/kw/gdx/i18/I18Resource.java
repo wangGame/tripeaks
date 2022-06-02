@@ -6,12 +6,28 @@ import com.badlogic.gdx.utils.I18NBundle;
 
 import java.util.Locale;
 
+/**
+ *
+ */
 public class I18Resource {
+    private I18NBundle bundle;
     public void loadResource(String path){
         FileHandle internal = Gdx.files.internal(path);
-        I18NBundle bundle = I18NBundle.createBundle(internal, Locale.US);
-//        System.out.println(bundle.get("levelCompleted.currentScore"));
-        System.out.println(bundle.format("levelCompleted.currentScore", 1));
+        bundle = I18NBundle.createBundle(internal, Locale.US);
+    }
+
+    public String findValue(String key){
+        if (bundle == null) {
+            throw new RuntimeException();
+        }
+        return bundle.get(key);
+    }
+
+    public String findValue(String key,String... v){
+        if (bundle == null) {
+            throw new RuntimeException();
+        }
+        return bundle.format(key,v);
     }
 
 }

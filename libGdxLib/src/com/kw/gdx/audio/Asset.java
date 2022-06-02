@@ -20,7 +20,7 @@ import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.utils.Disposable;
 import com.esotericsoftware.spine.SkeletonData;
 import com.kw.gdx.log.NLog;
-import com.kw.gdx.spineactor.SkeletonDataLoader;
+import com.esotericsoftware.spine.loader.SkeletonDataLoader;
 import com.ui.ManagerUIEditor;
 import com.ui.loader.ManagerUILoader;
 import com.ui.plist.PlistAtlas;

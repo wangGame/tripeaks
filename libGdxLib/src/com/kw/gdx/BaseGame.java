@@ -5,7 +5,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.CpuPolygonSpriteBatch;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 import com.esotericsoftware.spine.SkeletonRenderer;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.AnnotationInfo;
@@ -15,7 +18,7 @@ import com.kw.gdx.dialog.DialogManager;
 
 public class BaseGame extends Game {
     private Batch batch;
-    private ExtendViewport stageViewport;
+    private Viewport stageViewport;
 
     @Override
     public void create() {
@@ -45,10 +48,10 @@ public class BaseGame extends Game {
     }
 
     private void initViewport() {
-        if (Constant.viewportType == 0) {
+        if (Constant.viewportType == Constant.EXTENDVIEWPORT) {
             stageViewport = new ExtendViewport(Constant.WIDTH, Constant.HIGHT);
-        }else {
-            stageViewport = new ExtendViewport(Constant.WIDTH, Constant.HIGHT);
+        }else if (Constant.viewportType == Constant.FITVIEWPORT){
+            stageViewport = new FitViewport(Constant.WIDTH, Constant.HIGHT);
         }
     }
 
@@ -72,16 +75,16 @@ public class BaseGame extends Game {
         super.render();
     }
 
-    public ExtendViewport getStageViewport() {
+    public Viewport getStageViewport() {
         return stageViewport;
     }
 
     public Batch getBatch() {
         if (batch==null) {
-            if (Constant.batchType == 0) {
+            if (Constant.batchType == Constant.COUPOLYGONBATCH) {
                 batch = new CpuPolygonSpriteBatch();
-            }else {
-
+            }else if (Constant.batchType == Constant.SPRITEBATCH){
+                batch = new SpriteBatch();
             }
         }
         if (batch== null){

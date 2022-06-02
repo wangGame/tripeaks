@@ -1,4 +1,4 @@
-package com.kw.gdx.spineactor;
+package com.esotericsoftware.spine.loader;
 
 import com.kw.gdx.ads.PixmapImage;
 import com.badlogic.gdx.Gdx;
@@ -35,29 +35,13 @@ public class SpineActor extends Actor {
 
     public SpineActor(String path) {
         this.path = path;
-//        assetamnagerinstance = RiderGame.instence().getAssetManager();
-        if(!assetamnagerinstance.isLoaded(path+".json")) {
-            assetamnagerinstance.load(path + ".json", SkeletonData.class);
-            assetamnagerinstance.finishLoading();
-        }
+        flushAsset();
         init(path);
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public boolean isActive() {
-        return active;
     }
 
     public SpineActor(String path, boolean flag) {
         this.path = path;
-//        assetamnagerinstance = RiderGame.instence().getAssetManager();
-        if(!assetamnagerinstance.isLoaded(path+".json")) {
-            assetamnagerinstance.load(path + ".json", SkeletonData.class);
-            assetamnagerinstance.finishLoading();
-        }
+        flushAsset();
         init(path);
     }
 
@@ -70,22 +54,24 @@ public class SpineActor extends Actor {
             assetamnagerinstance.load(path + ".json", SkeletonData.class,mainSkeletonParameter);
             assetamnagerinstance.finishLoading();
         }
-        renderer = Asset.getAsset().getRenderer();
-        SkeletonData data = assetamnagerinstance.get(path+".json");
+        init(path);
+    }
 
 
+    public void flushAsset(){
+        assetamnagerinstance = Asset.getAsset().assetManager;
+        if(!assetamnagerinstance.isLoaded(path+".json")) {
+            assetamnagerinstance.load(path + ".json", SkeletonData.class);
+            assetamnagerinstance.finishLoading();
+        }
+    }
 
-//        Array<SlotData> slots = animData.getSkeletonData().getSlots();
-//        for (int i = 0; i < slots.size; i++) {
-//            SlotData slotData = slots.get(i);
-//            String attachmentName = slotData.getAttachmentName();
-//
-//        }
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
-        skeleton = new Skeleton(data);
-        animData = new AnimationStateData(data);
-        state = new AnimationState(animData);
-        setPosition(0,0);
+    public boolean isActive() {
+        return active;
     }
 
     @Override
@@ -107,10 +93,8 @@ public class SpineActor extends Actor {
         animData = new AnimationStateData(data);
         state = new AnimationState(animData);
         setPosition(0,0);
-
-        region1 = new TextureRegion(new PixmapImage(0,0).getPixmap());
     }
-    TextureRegion region1;
+
     public void setAnimation(String name, boolean loop){
 //        System.out.println(name+"=================name");
         getAnimaState().clearListeners();
@@ -192,24 +176,6 @@ public class SpineActor extends Actor {
         skeleton.updateWorldTransform();
         int src = batch.getBlendSrcFunc();
         int dst = batch.getBlendDstFunc();
-//        super.draw(batch, parentAlpha);
-
-        Array<Slot> slots1 = skeleton.getSlots();
-        for (Slot slot : slots1) {
-            Attachment attachment = slot.getAttachment();
-            if (attachment.getName().equals("zhi")||attachment.getName().equals("jiao")) {
-
-                if (attachment instanceof RegionAttachment) {
-                    RegionAttachment region = (RegionAttachment) attachment;
-                    region.setRegion(region1);
-                } else if (attachment instanceof MeshAttachment) {
-                    MeshAttachment mesh = (MeshAttachment) attachment;
-                    mesh.setRegion(region1);
-                }
-            }
-        }
-
-
         if(batch instanceof PolygonSpriteBatch){
 //            System.out.println(path);
             renderer.draw((PolygonSpriteBatch)batch,skeleton);
