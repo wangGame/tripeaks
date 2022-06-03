@@ -12,7 +12,7 @@ public class CocosResource {
         if (resourcePath!=null) {
             if (!Asset.getAsset().assetManager.isLoaded(resourcePath)){
                 ManagerUILoader.ManagerUIParameter managerUIParameter1 =
-                        new ManagerUILoader.ManagerUIParameter("ccs/", Asset.assetManager);
+                        new ManagerUILoader.ManagerUIParameter("cocos/", Asset.assetManager);
                 Asset.assetManager.load(resourcePath, ManagerUIEditor.class, managerUIParameter1);
                 Asset.assetManager.finishLoading();
             }

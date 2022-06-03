@@ -2,8 +2,8 @@ package ogz.tripeaks.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.kw.gdx.ads.Constant;
-import ogz.tripeaks.TripeakGame;
+
+import kw.tripeak.TripeakGame;
 
 public class DesktopLauncher {
     public static void main(String[] args) {

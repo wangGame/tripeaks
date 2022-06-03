@@ -16,9 +16,4 @@ public class TripeakGame extends BaseGame {
         Constant.viewColor.set(35.0F/255F,36.0F/255F,51.0F/255F,1);
         setScreen(new LoadingScreen(this));
     }
-
-    @Override
-    public void render() {
-        super.render();
-    }
 }

@@ -1,0 +1,1291 @@
+{
+  "ID": "a2ee0952-26b5-49ae-8bf9-4f1d6279b798",
+  "Version": "3.10.0.0",
+  "Name": "MainScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 2.1401,
+              "Y": 1.0
+            },
+            "RightMargin": -2189.0,
+            "Tag": 17,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/1-1.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 512.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.4984,
+                  "Y": 1.0
+                },
+                "RightMargin": 2061.0,
+                "Tag": 9,
+                "ActionTag": 43228593,
+                "Size": {
+                  "X": 2048.0,
+                  "Y": 1024.0
+                },
+                "Name": "Sprite_1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/1-2.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2048.0,
+                  "Y": 512.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4984,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.4984,
+                  "Y": 1.0
+                },
+                "LeftMargin": 2048.0,
+                "RightMargin": 13.0,
+                "Tag": 10,
+                "ActionTag": 1463976061,
+                "Size": {
+                  "X": 2048.0,
+                  "Y": 1024.0
+                },
+                "Name": "Sprite_2",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 713028947,
+            "Size": {
+              "X": 4109.0,
+              "Y": 1024.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 2.1458,
+              "Y": 1.0
+            },
+            "RightMargin": -2200.0,
+            "Tag": 18,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 594.4,
+                  "Y": 447.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1443,
+                  "Y": 0.4365
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 534.4,
+                "RightMargin": 3465.6001,
+                "TopMargin": 521.0,
+                "BottomMargin": 391.0,
+                "Tag": 50,
+                "ActionTag": -403746451,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 595.0,
+                  "Y": 442.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1444,
+                  "Y": 0.4316
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 535.0,
+                "RightMargin": 3465.0,
+                "TopMargin": 526.0,
+                "BottomMargin": 386.0,
+                "Tag": 75,
+                "ActionTag": -1533597045,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_0",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 595.0,
+                  "Y": 442.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1444,
+                  "Y": 0.4316
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 535.0,
+                "RightMargin": 3465.0,
+                "TopMargin": 526.0,
+                "BottomMargin": 386.0,
+                "Tag": 76,
+                "ActionTag": -7536807,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_1",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 740.0,
+                  "Y": 484.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1796,
+                  "Y": 0.4727
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 680.0,
+                "RightMargin": 3320.0,
+                "TopMargin": 484.0,
+                "BottomMargin": 428.0,
+                "Tag": 77,
+                "ActionTag": 1907280648,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_2",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 823.4,
+                  "Y": 401.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1999,
+                  "Y": 0.3916
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 763.4,
+                "RightMargin": 3236.6001,
+                "TopMargin": 567.0,
+                "BottomMargin": 345.0,
+                "Tag": 78,
+                "ActionTag": 873692048,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_3",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 928.0,
+                  "Y": 482.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2252,
+                  "Y": 0.4707
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 868.0,
+                "RightMargin": 3132.0,
+                "TopMargin": 486.0,
+                "BottomMargin": 426.0,
+                "Tag": 79,
+                "ActionTag": 1882844014,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_4",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1038.0,
+                  "Y": 403.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2519,
+                  "Y": 0.3936
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 978.0,
+                "RightMargin": 3022.0,
+                "TopMargin": 565.0,
+                "BottomMargin": 347.0,
+                "Tag": 80,
+                "ActionTag": -1976339590,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_5",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1155.0,
+                  "Y": 454.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2803,
+                  "Y": 0.4434
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1095.0,
+                "RightMargin": 2905.0,
+                "TopMargin": 514.0,
+                "BottomMargin": 398.0,
+                "Tag": 81,
+                "ActionTag": -1928100390,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_6",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1256.0,
+                  "Y": 376.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3049,
+                  "Y": 0.3672
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1196.0,
+                "RightMargin": 2804.0,
+                "TopMargin": 592.0,
+                "BottomMargin": 320.0,
+                "Tag": 82,
+                "ActionTag": 700998377,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_7",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1384.4,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.336,
+                  "Y": 0.3516
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1324.4,
+                "RightMargin": 2675.6001,
+                "TopMargin": 608.0,
+                "BottomMargin": 304.0,
+                "Tag": 83,
+                "ActionTag": 20883194,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_8",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1508.4,
+                  "Y": 366.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3661,
+                  "Y": 0.3574
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1448.4,
+                "RightMargin": 2551.6001,
+                "TopMargin": 602.0,
+                "BottomMargin": 310.0,
+                "Tag": 84,
+                "ActionTag": -1126677313,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_9",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1618.0,
+                  "Y": 438.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3927,
+                  "Y": 0.4277
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1558.0,
+                "RightMargin": 2442.0,
+                "TopMargin": 530.0,
+                "BottomMargin": 382.0,
+                "Tag": 85,
+                "ActionTag": -1482462875,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_10",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1725.0,
+                  "Y": 520.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4187,
+                  "Y": 0.5078
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1665.0,
+                "RightMargin": 2335.0,
+                "TopMargin": 448.0,
+                "BottomMargin": 464.0,
+                "Tag": 86,
+                "ActionTag": -1490767325,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_11",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1824.4,
+                  "Y": 599.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4428,
+                  "Y": 0.585
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1764.4,
+                "RightMargin": 2235.6001,
+                "TopMargin": 369.0,
+                "BottomMargin": 543.0,
+                "Tag": 87,
+                "ActionTag": 1633952154,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_12",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1927.0,
+                  "Y": 668.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4677,
+                  "Y": 0.6523
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 1867.0,
+                "RightMargin": 2133.0,
+                "TopMargin": 300.0,
+                "BottomMargin": 612.0,
+                "Tag": 88,
+                "ActionTag": 1652488902,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_13",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2060.0,
+                  "Y": 673.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.6572
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2000.0,
+                "RightMargin": 2000.0,
+                "TopMargin": 295.0,
+                "BottomMargin": 617.0,
+                "Tag": 89,
+                "ActionTag": 2100930268,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_14",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2166.0,
+                  "Y": 572.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5257,
+                  "Y": 0.5586
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2106.0,
+                "RightMargin": 1894.0,
+                "TopMargin": 396.0,
+                "BottomMargin": 516.0,
+                "Tag": 90,
+                "ActionTag": -223003325,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_15",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2245.0,
+                  "Y": 472.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5449,
+                  "Y": 0.4609
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2185.0,
+                "RightMargin": 1815.0,
+                "TopMargin": 496.0,
+                "BottomMargin": 416.0,
+                "Tag": 91,
+                "ActionTag": -687412044,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_16",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2345.0,
+                  "Y": 376.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5692,
+                  "Y": 0.3672
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2285.0,
+                "RightMargin": 1715.0,
+                "TopMargin": 592.0,
+                "BottomMargin": 320.0,
+                "Tag": 92,
+                "ActionTag": -516865833,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_17",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2445.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5934,
+                  "Y": 0.2871
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2385.0,
+                "RightMargin": 1615.0,
+                "TopMargin": 674.0,
+                "BottomMargin": 238.0,
+                "Tag": 93,
+                "ActionTag": -2068980828,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_18",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2569.0,
+                  "Y": 325.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6235,
+                  "Y": 0.3174
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2509.0,
+                "RightMargin": 1491.0,
+                "TopMargin": 643.0,
+                "BottomMargin": 269.0,
+                "Tag": 94,
+                "ActionTag": 187690267,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_19",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2674.0,
+                  "Y": 400.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.649,
+                  "Y": 0.3906
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2614.0,
+                "RightMargin": 1386.0,
+                "TopMargin": 568.0,
+                "BottomMargin": 344.0,
+                "Tag": 95,
+                "ActionTag": 34903225,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_20",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2723.0,
+                  "Y": 520.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6609,
+                  "Y": 0.5078
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2663.0,
+                "RightMargin": 1337.0,
+                "TopMargin": 448.0,
+                "BottomMargin": 464.0,
+                "Tag": 96,
+                "ActionTag": -1194048231,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_21",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "level/map_unselect.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 2771.0,
+                  "Y": 636.0
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6726,
+                  "Y": 0.6211
+                },
+                "PreSize": {
+                  "X": 0.0291,
+                  "Y": 0.1094
+                },
+                "LeftMargin": 2711.0,
+                "RightMargin": 1289.0,
+                "TopMargin": 332.0,
+                "BottomMargin": 580.0,
+                "Tag": 97,
+                "ActionTag": 169975287,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 112.0
+                },
+                "Name": "map_22",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -957572756,
+            "Size": {
+              "X": 4120.0,
+              "Y": 1024.0
+            },
+            "Name": "Panel_2",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1024.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "level/1-1.png",
+        "level/1-2.png",
+        "level/map_unselect.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

@@ -1,5 +1,7 @@
 package ogz.tripeaks.screen;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -7,12 +9,17 @@ import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.utils.JsonReader;
+import com.badlogic.gdx.utils.JsonValue;
 import com.badlogic.gdx.utils.Queue;
 import com.kw.gdx.BaseGame;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.listener.ButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 
 import ogz.tripeaks.card.CardGroup;
@@ -39,12 +46,50 @@ public class GameScreen extends BaseScreen {
         Group group = new Group();
         addActor(group);
         CardGroup[][] objects = new CardGroup[ints.length][ints[0].length];
+
+
+        Group tempGroup = new Group();
+        addActor(tempGroup);
+        tempGroup.setPosition(Constant.GAMEWIDTH/2,Constant.GAMEHIGHT/2,Align.center);
+        FileHandle internal = Gdx.files.internal("level/Level-1.txt");
+        BufferedReader reader = new BufferedReader(internal.reader());
+        String content = null;
+        try {
+            reader.readLine();
+            reader.readLine();
+            String s = reader.readLine();
+            content = s.substring(s.indexOf("=")+3,s.length()-1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        JsonValue root = new JsonReader().parse(content);
+        JsonValue jsonValue = root.get("GameDocuments").get("Board").child.get("CardList");
+        JsonValue child1 = jsonValue.child;
+        JsonValue temp = child1;
+        while (temp!= null) {
+            int id = temp.get("id").asInt();
+            float baseX = temp.get("x").asFloat();
+            float baseY = temp.get("y").asFloat();
+            float rotation = temp.get("rotation").asFloat();
+            float rank = temp.get("rank").asInt();
+            CardGroup cardGroup = new CardGroup(1);
+            cardGroup.setPosition(baseX*0.5F,baseY*0.5F);
+            tempGroup.addActor(cardGroup);
+
+//            temp.get("suit");
+//            temp.get("rotation");
+//            System.out.println(temp.get("id")+" "+temp.get("x")+"  "+temp.get("y")+"  "+temp.get("rotation")+"  "+temp.get("rank")+"  "+temp.get("suit")+"  "+temp.get("rotation"));
+            temp = temp.next;
+        }
+
+
         for (int i = 0; i < ints.length; i++) {
             for (int i1 = 0; i1 < ints[0].length; i1++) {
                 int i2 = ints[i][i1];
                 if (i2==0)continue;
                 CardGroup btn = new CardGroup(random.remove((int)Math.random()*random.size()));
-                group.addActor(btn);
+//                group.addActor(btn);
                 btn.setCardListener(new CardGroup.CardListener() {
                     @Override
                     public void click(CardGroup cardGroup) {
