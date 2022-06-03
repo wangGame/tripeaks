@@ -108,6 +108,24 @@ public class CardGroup extends Group {
         cardData.setPosition(getWidth()/2,getHeight()/2,Align.center);
     }
 
+    private int id;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int[] arr;
+    public void check(int arr[]){
+        this.arr = arr;
+    }
+
+    public int[] getArr() {
+        return arr;
+    }
+
+    public int getid() {
+        return id;
+    }
+
     public interface CardListener{
         public void click(CardGroup cardGroup);
     }

@@ -8,12 +8,44 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.stream.Stream;
 
 public class JsonApp {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        try {
+            method2();
+
+        }catch (Exception e){
+        }
+    }
+
+    public static void method2()throws Exception {
         BufferedReader bufferedReader
                 = new BufferedReader(
-                        new FileReader(new File("level/Level-1.txt")));
+                new FileReader(new File("level/Level20.txt")));
+        StringBuilder str = new StringBuilder();
+        String line = null;
+        while ((line = bufferedReader.readLine())!= null) {
+            str.append(line);
+        }
+        String s = str.toString();
+        String[] split = s.split("m_Script");
+        String s1 = split[1];
+        String content = s1.substring(s1.indexOf("=")+3,s1.length()-1);
+        JsonValue root = new JsonReader().parse(content);
+        JsonValue jsonValue = root.get("GameDocuments").get("Board").child.get("CardList");
+        JsonValue child1 = jsonValue.child;
+        JsonValue temp = child1;
+        while (temp!= null) {
+            System.out.println(temp.get("id")+" "+temp.get("x")+"  "+temp.get("y")+"  "+temp.get("rotation")+"  "+temp.get("rank")+"  "+temp.get("suit")+"  "+temp.get("rotation"));
+            temp = temp.next;
+        }
+    }
+
+    public void method1()throws Exception {
+        BufferedReader bufferedReader
+                = new BufferedReader(
+                new FileReader(new File("level/Level1.txt")));
         bufferedReader.readLine();
         bufferedReader.readLine();
         String s = bufferedReader.readLine();

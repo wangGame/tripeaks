@@ -29,7 +29,6 @@ public class MainScreen extends BaseScreen {
         addActor(pane);
         pane.setHeight(1024);
         pane.setWidth(1920);
-
         SnapshotArray<Actor> children = panel_2.getChildren();
         children.removeIndex(0);
         children.removeIndex(0);
@@ -39,9 +38,13 @@ public class MainScreen extends BaseScreen {
 //        tempChildren.removeIndex(0);
 //        tempChildren.removeIndex(0);
         for (Actor child : tempChildren) {
-
             index++;
-            GameActor actor = new GameActor(child,index);
+            GameActor actor = new GameActor(child, index, new GameActor.GameActorListener() {
+                @Override
+                public void click() {
+                    setScreen(GameScreen.class);
+                }
+            });
             panel_2.addActor(actor);
         }
     }
