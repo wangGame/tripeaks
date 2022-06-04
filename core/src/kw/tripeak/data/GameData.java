@@ -14,7 +14,9 @@ import ogz.tripeaks.dialog.SuccessDialog;
 import ogz.tripeaks.screen.GameScreen;
 
 public class GameData {
+
     public PeakBean getData(){
+
         PeakBean bean = new PeakBean();
         FileHandle internal = Gdx.files.internal("level/Level"+ LevelConfig.levelNum +".txt");
         BufferedReader reader = new BufferedReader(internal.reader());
@@ -49,6 +51,7 @@ public class GameData {
             int rank = temp.get("rank").asInt();
             int suit = temp.get("suit").asInt();
             int[] covers = temp.get("covers").asIntArray();
+
             temp = temp.next;
             Board board = new Board();
             board.setId(id);
@@ -63,4 +66,6 @@ public class GameData {
         bean.setBoards(arrayList);
         return bean;
     }
+
+
 }

@@ -7,7 +7,7 @@ import com.kw.gdx.annotation.GameInfo;
 import kw.tripeak.screen.LoadingScreen;
 
 
-@GameInfo(width = 1090,height = 1024)
+@GameInfo(width = 1920,height = 1080)
 public class TripeakGame extends BaseGame {
     @Override
     protected void loadingView() {

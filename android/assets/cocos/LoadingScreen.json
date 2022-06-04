@@ -20,17 +20,17 @@
               "Path": "loading/loading.png",
               "Plist": ""
             },
-            "BlendFunc": {
-              "Src": 1,
-              "Dst": 771
-            },
+            "Scale9OriginX": 675,
+            "Scale9OriginY": 337,
+            "Scale9Width": 698,
+            "Scale9Height": 350,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
               "X": 960.0,
-              "Y": 512.0
+              "Y": 540.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -44,23 +44,24 @@
             },
             "PreSize": {
               "X": 1.0667,
-              "Y": 1.0
+              "Y": 0.9481
             },
             "LeftMargin": -64.0,
             "RightMargin": -64.0,
-            "Tag": 4,
-            "ActionTag": 2140653714,
+            "TopMargin": 28.0,
+            "BottomMargin": 28.0,
+            "Tag": 66,
+            "ActionTag": 1018228310,
             "Size": {
               "X": 2048.0,
               "Y": 1024.0
             },
-            "Name": "loading_2",
-            "ctype": "SpriteObjectData"
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
           },
           {
             "ClipAble": false,
             "BackColorAlpha": 102,
-            "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 150,
               "G": 200
@@ -73,6 +74,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5
@@ -89,15 +92,15 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.5,
-              "Y": 0.0469
+              "Y": 0.0444
             },
             "PreSize": {
               "X": 0.3271,
-              "Y": 0.0586
+              "Y": 0.0556
             },
             "LeftMargin": 646.0,
             "RightMargin": 646.0,
-            "TopMargin": 916.0,
+            "TopMargin": 972.0,
             "BottomMargin": 48.0,
             "Tag": 7,
             "Children": [
@@ -148,16 +151,16 @@
                   "Path": "loading/loading_process.png",
                   "Plist": ""
                 },
-                "BlendFunc": {
-                  "Src": 1,
-                  "Dst": 771
-                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 41,
+                "Scale9OriginY": 1,
+                "Scale9Width": 514,
+                "Scale9Height": 16,
                 "AnchorPoint": {
-                  "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 314.0,
+                  "X": 19.0001,
                   "Y": 30.0
                 },
                 "Scale": {
@@ -167,25 +170,25 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.5,
+                  "X": 0.0303,
                   "Y": 0.5
                 },
                 "PreSize": {
-                  "X": 0.9395,
+                  "X": 0.0924,
                   "Y": 0.3
                 },
-                "LeftMargin": 19.0,
-                "RightMargin": 19.0,
+                "LeftMargin": 19.0001,
+                "RightMargin": 550.9999,
                 "TopMargin": 21.0,
                 "BottomMargin": 21.0,
-                "Tag": 8,
-                "ActionTag": 419627178,
+                "Tag": 100,
+                "ActionTag": -489780361,
                 "Size": {
-                  "X": 590.0,
+                  "X": 58.0,
                   "Y": 18.0
                 },
                 "Name": "loading_process",
-                "ctype": "SpriteObjectData"
+                "ctype": "ImageViewObjectData"
               }
             ],
             "ActionTag": -1009081595,
@@ -199,7 +202,7 @@
         ],
         "Size": {
           "X": 1920.0,
-          "Y": 1024.0
+          "Y": 1080.0
         },
         "Name": "Scene",
         "ctype": "SingleNodeObjectData"
