@@ -26,7 +26,6 @@ public class GameActor extends Group {
         addActor(levelNum);
         setPosition(image.getX(Align.center),image.getY(Align.center), Align.center);
         image.setPosition(getWidth()/2,getHeight()/2,Align.center);
-        setDebug(true);
         addListener(new ButtonListener(){
             @Override
             public void clicked(InputEvent event, float x, float y) {

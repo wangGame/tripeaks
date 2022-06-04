@@ -3,31 +3,15 @@ package kw.tripeak.data;
 import java.util.ArrayList;
 
 public class PeakBean {
-    private Board board;
+    private int num;
     private ArrayList<Board> boards;
 
-    public PeakBean(){
-        board = new Board();
+    public int getNum() {
+        return num;
     }
 
-    public Board getBoard() {
-        return board;
-    }
-
-    public int getHandRank() {
-        return board.getRank();
-    }
-
-    public void setHandRank(int handRank) {
-        this.board.setRank(handRank);
-    }
-
-    public int getHandSuit() {
-        return board.getSuit();
-    }
-
-    public void setHandSuit(int handSuit) {
-        this.board.setSuit(handSuit);
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public ArrayList<Board> getBoards() {

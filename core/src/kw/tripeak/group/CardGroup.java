@@ -55,7 +55,7 @@ public class CardGroup extends Group {
         cardData.setOrigin(Align.center);
         imageBg.setPosition(getWidth()/2,getHeight()/2, Align.center);
         imageFront.setPosition(getWidth()/2,getHeight()/2,Align.center);
-        cardData.setPosition(getWidth()/2,getHeight()/2,Align.center);
+        cardData.setPosition(getWidth()/2,getHeight()/2-20,Align.center);
         smallCardData.setPosition(30,getHeight()-40,Align.center);
         huase.setPosition(getWidth()-30,getHeight()-40,Align.center);
         addListener(new ButtonListener(){
@@ -92,6 +92,10 @@ public class CardGroup extends Group {
             imageFront.setVisible(false);
             cardData.toFront();
         }
+    }
+
+    public void onlyTouch(){
+        setTouchable(Touchable.enabled);
     }
 
     public void setPosX(int posx) {

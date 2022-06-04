@@ -40,11 +40,11 @@ public class GameScreen extends BaseScreen {
         super.initView();
         GameData data = new GameData();
         Group tempGroup = findActor("peakGroup");
+        tempGroup.setY(tempGroup.getY() - 140);
 //        tempGroup.setPosition(Constant.GAMEWIDTH/2,Constant.GAMEHIGHT/2,Align.center);
         PeakBean data1 = data.getData();
         for (Board board : data1.getBoards()) {
             CardGroup cardGroup = new CardGroup(board);
-
             tempGroup.addActor(cardGroup);
             cardGroup.setCardListener(new CardGroup.CardListener() {
                 @Override
@@ -84,7 +84,12 @@ public class GameScreen extends BaseScreen {
         resetBtn.setSize(75,110);
         resetBtn.setPosition(150,50);
         Group basePeak = findActor("basePeak");
-        baseGroup = new CardGroup(data1.getBoard());
+
+
+        Board board1 = new Board();
+        board1.setRank((int)(Math.random()*12)+1);
+        board1.setSuit((int)(Math.random()*4)+1);
+        baseGroup = new CardGroup(board1);
         basePeak.addActor(baseGroup);
         basePeak.setX(340);
         basePeak.setDebug(true);
@@ -96,16 +101,22 @@ public class GameScreen extends BaseScreen {
         Group diPack = findActor("freePeak");
         diPack.setDebug(true);
         diPack.setX(960,Align.center);
-        for (int i = 0; i < 23; i++) {
+        Group groupTemp = new Group();
+        groupTemp.setHeight(diPack.getHeight());
+        int i1 = data.getData().getNum() - 1;
+        groupTemp.setWidth(i1*34+144);
+        for (int i = 0; i < data.getData().getNum()-1; i++) {
             Board board = new Board();
             board.setRank((int)(Math.random()*12)+1);
             board.setSuit((int)(Math.random()*4)+1);
             CardGroup cardGroup = new CardGroup(board);
-            diPack.addActor(cardGroup);
+            groupTemp.addActor(cardGroup);
             cardGroup.setX(34*i);
             cardGroup.toBack();
             stack.addLast(cardGroup);
         }
+        diPack.addActor(groupTemp);
+        groupTemp.setX(diPack.getWidth()/2,Align.center);
         Image addBtn = new Image(new Texture("images/cards/peak_back.png"));
         addActor(addBtn);
         addBtn.setOrigin(Align.center);
@@ -128,7 +139,6 @@ public class GameScreen extends BaseScreen {
                 }
             }
         });
-        stack.first().onlySelect(true);
 
 //        extracted(data);
     }

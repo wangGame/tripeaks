@@ -90,7 +90,7 @@ public class GameScreen extends BaseScreen {
         Image resetBtn = new Image(new Texture("images/cards/dark_card.png"));
         resetBtn.setSize(75,110);
         resetBtn.setPosition(150,50);
-        baseGroup = new CardGroup(data1.getHandRank());
+        baseGroup = new CardGroup(1);
         addActor(baseGroup);
         baseGroup.setPosition(250,50);
         baseGroup.select(true);

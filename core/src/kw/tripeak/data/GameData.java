@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import kw.tripeak.constant.LevelConfig;
 import ogz.tripeaks.card.CardGroup;
 import ogz.tripeaks.dialog.SuccessDialog;
-import ogz.tripeaks.screen.GameScreen;
+//import ogz.tripeaks.screen.GameScreen;
 
 public class GameData {
 
@@ -35,13 +35,14 @@ public class GameData {
         String content = s1.substring(s1.indexOf("=")+3,s1.length()-1);
         JsonValue root = new JsonReader().parse(content);
         JsonValue jsonValue = root.get("GameDocuments").get("Board").child.get("CardList");
+        JsonValue gameSetting = root.get("GameSetting");
+        int handCardCount = gameSetting.get("handCardCount").asInt();
+        bean.setNum(handCardCount);
         JsonValue child1 = jsonValue.child;
         JsonValue temp = child1;
-        JsonValue handCardList = root.get("GameDocuments").get("HandCardList");
-        JsonValue handRank = handCardList.child.get("rank");
-        JsonValue handSuit = handCardList.child.get("suit");
-        bean.setHandSuit(handSuit.asInt());
-        bean.setHandRank(handRank.asInt());
+//        JsonValue handCardList = root.get("GameDocuments").get("HandCardList");
+//        bean.setHandSuit(handSuit.asInt());
+//        bean.setHandRank(handRank.asInt());
         ArrayList<Board> arrayList = new ArrayList<>();
         while (temp!= null) {
             int id = temp.get("id").asInt();

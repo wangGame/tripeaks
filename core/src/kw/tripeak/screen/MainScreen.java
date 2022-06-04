@@ -23,6 +23,9 @@ public class MainScreen extends BaseScreen {
         super.initView();
         Actor panel_1 = rootView.findActor("scrollpaneBg");
         Group panel_2 = rootView.findActor("mapPoint");
+        float v = Constant.GAMEHIGHT / panel_1.getHeight();
+        panel_1.setScale(v);
+        panel_2.setScale(v);
         Group group = new Group();
         group.addActor(panel_1);
         group.addActor(panel_2);
