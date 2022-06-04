@@ -27,18 +27,9 @@ public class LoadingScreen extends BaseScreen {
     @Override
     public void show() {
         super.show();
-//        Pixmap pixmap = new Pixmap(10,10,Pixmap.Format.RGBA8888);
-//        for (int i = 0; i < 10; i++) {
-//            for (int i1 = 0; i1 < 10; i1++) {
-//                pixmap.drawPixel(i,i1, Color.BLUE.toIntBits());
-//            }
-//        }
-//        Image image = new Image(new Texture(pixmap));
-////        addActor(image);
         stage.addAction(Actions.delay(0,Actions.run(()->{
             setScreen(MainScreen.class);
         })));
-
     }
 
 }
