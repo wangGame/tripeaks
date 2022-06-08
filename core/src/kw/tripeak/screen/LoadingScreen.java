@@ -8,7 +8,7 @@ import com.kw.gdx.screen.BaseScreen;
 
 import kw.tripeak.asset.FontResource;
 
-@ScreenResource("cocos/LoadingScreen.json")
+@ScreenResource("cocos/chapteritem.json")
 public class LoadingScreen extends BaseScreen {
     public LoadingScreen(BaseGame game) {
         super(game);
@@ -22,7 +22,7 @@ public class LoadingScreen extends BaseScreen {
         stage.addAction(Actions.delay(1,Actions.run(()->{
             FontResource.getInstance().getRes();
             Asset.getAsset().getResource(FontResource.class);
-            setScreen(MainScreen.class);
+//            setScreen(MainScreen.class);
         })));
     }
 }

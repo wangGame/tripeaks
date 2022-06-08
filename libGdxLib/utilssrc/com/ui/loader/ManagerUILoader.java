@@ -27,6 +27,7 @@ import com.badlogic.gdx.assets.loaders.TextureLoader;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.ui.ManagerUIEditor;
@@ -113,6 +114,8 @@ public class ManagerUILoader extends AsynchronousAssetLoader<ManagerUIEditor, Ma
 				assetDescriptors.add(new AssetDescriptor<PlistAtlas>(fname, PlistAtlas.class, plistAtlasParameter));
 			else if (name.endsWith(".fnt"))
 				assetDescriptors.add(new AssetDescriptor<BitmapFont>(fname, BitmapFont.class, bitmapFontParameter));
+			else if (name.equals(".altas"))
+				assetDescriptors.add(new AssetDescriptor<TextureAtlas>(fname, TextureAtlas.class));
 			else
 				Gdx.app.debug(ManagerUILoader.class.getName(), "Unsolved resource");
 		}
