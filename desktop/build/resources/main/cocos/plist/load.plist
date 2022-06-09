@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>loading/baoshi.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{793,2},{43,42}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{43,42}</string>
+			</dict>
+			<key>loading/car.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{670,2},{119,69}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{119,69}</string>
+			</dict>
+			<key>loading/font.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,537},{359,117}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{359,117}</string>
+			</dict>
+			<key>loading/juxing_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{365,537},{395,4}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{395,4}</string>
+			</dict>
+			<key>loading/logo.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{664,531}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{664,531}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>load.png</string>
+			<key>realTextureFileName</key>
+			<string>load.png</string>
+			<key>size</key>
+			<string>{838,656}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>838</integer>
+			<key>height</key>
+			<integer>656</integer>
+		</dict>
+	</dict>
+</plist>
