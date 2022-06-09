@@ -8,12 +8,16 @@ import com.badlogic.gdx.assets.loaders.SynchronousAssetLoader;
 import com.badlogic.gdx.assets.loaders.TextureLoader.TextureParameter;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.TextureAtlasData.Page;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
 
-public class PlistAtlasLoader extends SynchronousAssetLoader<PlistAtlas, PlistAtlasParameter> {
-	public PlistAtlasLoader (FileHandleResolver resolver) {
+public class MiniPlistAtlasLoader extends SynchronousAssetLoader<PlistAtlas, PlistAtlasParameter> {
+	private float scale;
+	public MiniPlistAtlasLoader(FileHandleResolver resolver,float scale) {
 		super(resolver);
+		this.scale = scale;
 	}
 
 	PlistAtlas.PlistAtlasData data;
@@ -24,8 +28,36 @@ public class PlistAtlasLoader extends SynchronousAssetLoader<PlistAtlas, PlistAt
 			Texture texture = assetManager.get(page.textureFile.path().replaceAll("\\\\", "/"), Texture.class);
 			page.texture = texture;
 		}
+		PlistAtlas atlas = new PlistAtlas(data);
+		for (TextureAtlas.AtlasRegion region : atlas.getRegions()) {
 
-		return new PlistAtlas(data);
+			if(region.splits!=null)
+				continue;
+
+			float wid=region.getTexture().getWidth();
+			float height=region.getTexture().getHeight();
+
+
+			float u = region.getU();
+			float u2 = region.getU2();
+			float v = region.getV();
+			float v2 = region.getV2();
+
+			u= (MathUtils.ceil(u*wid*scale)+0.25f/scale)/scale/wid;
+			u2=(MathUtils.floor(u2*wid*scale)-0.25f/scale)/scale/wid;
+			v= (MathUtils.ceil(v*height*scale)+0.25f/scale)/scale/height;
+			v2=(MathUtils.floor(v2*height*scale)-0.25f/scale)/scale/height;
+
+			if(u<u2){
+				region.setU(u);
+				region.setU2(u2);
+			}
+			else if(v<v2){
+				region.setV(v);
+				region.setV2(v2);
+			}
+		}
+		return atlas;
 	}
 
 	@Override
@@ -47,5 +79,4 @@ public class PlistAtlasLoader extends SynchronousAssetLoader<PlistAtlas, PlistAt
 		}
 		return dependencies;
 	}
-
 }

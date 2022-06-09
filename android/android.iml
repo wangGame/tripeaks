@@ -91,5 +91,7 @@
     <orderEntry type="module" module-name="libGdxLib" />
     <orderEntry type="module" module-name="core" />
     <orderEntry type="module" module-name="libGdxLib" />
+    <orderEntry type="module" module-name="core" />
+    <orderEntry type="module" module-name="libGdxLib" />
   </component>
 </module>

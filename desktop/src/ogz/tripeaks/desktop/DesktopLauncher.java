@@ -18,8 +18,11 @@ public class DesktopLauncher {
 //                "images/icon32.png",
 //                "images/icon48.png"
 //            );
-        config.width = (int) (640*1.5F);
-        config.height = (int) (360*1.5F);
+//        config.width = (int) (640*1.5F);
+//        config.height = (int) (360*1.5F);
+        config.height = (int) (640*1.5F);
+        config.width = (int) (360*1.5F);
+
         new LwjglApplication(new TripeakGame(), config);
     }
 }

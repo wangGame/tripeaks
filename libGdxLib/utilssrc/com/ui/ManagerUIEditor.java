@@ -41,16 +41,10 @@ import net.mwplay.cocostudio.ui.BaseCocoStudioUIEditor;
 import net.mwplay.cocostudio.ui.model.FileData;
 import net.mwplay.cocostudio.ui.model.ObjectData;
 import net.mwplay.cocostudio.ui.widget.TTFLabelStyle;
-
 import java.util.List;
-
-//import com.mygdx.game.assets.Assets;
-
-//import com.qs.assets.MyAssets;
 
 public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposable {
 	final String tag = ManagerUIEditor.class.getName();
-
 	//cocos项目目录
 	public String dirName;
 	//cocos文件目录
@@ -59,22 +53,20 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 	public Array<String> unmanagedLoad = new Array<String>();
 	//用到的assetmanager
 	AssetManager assetManager;
+	//销毁
+	private boolean unloaded=false;
 
 	//默认图片过滤方式
-	TextureLoader.TextureParameter textureParameter = new TextureLoader.TextureParameter() {
-		{
-			minFilter = Texture.TextureFilter.Linear;
-			magFilter = Texture.TextureFilter.Linear;
-		}
-	};
+	TextureLoader.TextureParameter textureParameter = new TextureLoader.TextureParameter() {{
+		minFilter = Texture.TextureFilter.Linear;
+		magFilter = Texture.TextureFilter.Linear;
+	}};
 
 	//默认bitmap过滤方式
-	BitmapFontLoader.BitmapFontParameter bitmapFontParameter = new BitmapFontLoader.BitmapFontParameter() {
-		{
-			minFilter = Texture.TextureFilter.Linear;
-			magFilter = Texture.TextureFilter.Linear;
-		}
-	};
+	BitmapFontLoader.BitmapFontParameter bitmapFontParameter = new BitmapFontLoader.BitmapFontParameter() {{
+		minFilter = Texture.TextureFilter.Linear;
+		magFilter = Texture.TextureFilter.Linear;
+	}};
 
 	//初始化函数
 	public ManagerUIEditor (FileHandle jsonFile) {
@@ -89,20 +81,16 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 	//初始化函数
 	public ManagerUIEditor (FileHandle jsonFile, String dirName, AssetManager assetManager) {
 		super(jsonFile);
-
 		this.assetManager = assetManager;
 		if (this.assetManager == null)
 			this.assetManager = null;
-
 		this.dirName = dirName;
 		if (this.dirName == null) {
 			this.dirName = jsonFile.parent().toString();
-
 			if (!this.dirName.equals("")) {
 				this.dirName += "/";
 			}
 		}
-
 		filedir = jsonFile.parent().toString();
 		if (!filedir.equals("")) {
 			filedir += "/";
@@ -121,7 +109,6 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 		if (name == null || name.equals("")) {
 			return null;
 		}
-
 		return dirName + name;
 	}
 
@@ -131,7 +118,6 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 		if (filedata == null || filedata.Path.equals("")) {
 			return null;
 		}
-
 		if (filedata.Plist == null || filedata.Plist.equals("")) {
 			String texturepath = dirName + filedata.Path;
 			if (!assetManager.isLoaded(texturepath)) {
@@ -153,8 +139,7 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 				PlistAtlas atlas = assetManager.get(atlaspath, PlistAtlas.class);
 				String text = filedata.Path.replace(".png", "");
 				return atlas.findRegion(text);
-
-			} else {
+			} else if (atlaspath.endsWith(".atlas")){
 				if (!assetManager.isLoaded(atlaspath)) {
 					assetManager.load(atlaspath, TextureAtlas.class);
 					assetManager.finishLoading();
@@ -166,6 +151,7 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 				return atlas.findRegion(text);
 			}
 		}
+		return null;
 	}
 	//获取drawable
 	@Override
@@ -174,13 +160,10 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 		if (fileData == null) {// 默认值不显示
 			return null;
 		}
-
 		TextureRegion textureRegion = findTextureRegion(option, fileData);
-
 		if (textureRegion == null) {
 			return null;
 		}
-
 		if (option.Scale9Enable) {// 九宫格支持
 			NinePatch np = new NinePatch(textureRegion, option.Scale9OriginX,
 				textureRegion.getRegionWidth() - option.Scale9Width - option.Scale9OriginX, option.Scale9OriginY,
@@ -188,7 +171,6 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 //			np.setColor(NUtils.getColor(option.CColor, option.Alpha));
 			return new NinePatchDrawable(np);
 		}
-
 		if (textureRegion instanceof TextureAtlas.AtlasRegion) {
 			TextureAtlas.AtlasRegion atlasRegion = (TextureAtlas.AtlasRegion)textureRegion;
 			TextureAtlas.AtlasSprite atlasSprite = new TextureAtlas.AtlasSprite(atlasRegion);
@@ -201,16 +183,11 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 	//获取labelstyle
 	@Override
 	public TTFLabelStyle createLabelStyle (ObjectData option, String text, Color color) {
-
 		FileHandle fontFile = null;
-
 		if (fontFile == null) {
 			Gdx.app.debug(option.ctype, "ttf字体不存在,使用默认字体");
 		}
-
 		BitmapFont font = null;
-//		font = FontUtil.createFont(fontFile, text, option.FontSize);
-
 		font = new BitmapFont();
 		return new TTFLabelStyle(new LabelStyle(font, color), fontFile, option.FontSize);
 	}
@@ -251,12 +228,9 @@ public class ManagerUIEditor extends BaseCocoStudioUIEditor implements Disposabl
 			Gdx.app.debug(tag, "unmanaged load " + uipath);
 		}
 		ui = assetManager.get(uipath, ManagerUIEditor.class);
-
 		return ui;
 	}
 
-	//销毁
-	private boolean unloaded=false;
 	@Override
 	public synchronized void dispose () {
 		if (!unloaded) {

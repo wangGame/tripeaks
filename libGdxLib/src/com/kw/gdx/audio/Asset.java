@@ -26,6 +26,7 @@ import com.kw.gdx.mini.MiniTextureAtlasLoader;
 import com.kw.gdx.mini.MiniTextureLoader;
 import com.ui.ManagerUIEditor;
 import com.ui.loader.ManagerUILoader;
+import com.ui.plist.MiniPlistAtlasLoader;
 import com.ui.plist.PlistAtlas;
 import com.ui.plist.PlistAtlasLoader;
 
@@ -166,8 +167,11 @@ public class Asset implements Disposable {
             assetManager.setLoader(ManagerUIEditor.class,new ManagerUILoader(assetManager.getFileHandleResolver()));
             assetManager.setLoader(PlistAtlas.class, new PlistAtlasLoader(assetManager.getFileHandleResolver()));
             assetManager.setLoader(SkeletonData.class,new SkeletonDataLoader(assetManager.getFileHandleResolver()));
-            assetManager.setLoader(TextureAtlas.class,new MiniTextureAtlasLoader(assetManager.getFileHandleResolver(), Configuration.scale));
-            assetManager.setLoader(Texture.class,new MiniTextureLoader(assetManager.getFileHandleResolver(),Configuration.scale));
+            if (Configuration.device_state == Configuration.DeviceState.poor) {
+                assetManager.setLoader(TextureAtlas.class, new MiniTextureAtlasLoader(assetManager.getFileHandleResolver(), Configuration.scale));
+                assetManager.setLoader(Texture.class, new MiniTextureLoader(assetManager.getFileHandleResolver(), Configuration.scale));
+                assetManager.setLoader(PlistAtlas.class, new MiniPlistAtlasLoader(assetManager.getFileHandleResolver(), Configuration.scale));
+            }
         }
         return assetManager;
     }
