@@ -8,7 +8,7 @@ import com.kw.gdx.screen.BaseScreen;
 
 import kw.tripeak.asset.FontResource;
 
-@ScreenResource("cocos/loading_11.json")
+@ScreenResource("cocos/Rate1.json")
 public class LoadingScreen extends BaseScreen {
     public LoadingScreen(BaseGame game) {
         super(game);

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>rate1/bg_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{100,580}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,580}</string>
+			</dict>
+			<key>rate1/do_you_enj.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,586},{751,49}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{751,49}</string>
+			</dict>
+			<key>rate1/No_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{876,79},{74,58}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{74,58}</string>
+			</dict>
+			<key>rate1/no_bg_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{974,2},{40,40}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{40,40}</string>
+			</dict>
+			<key>rate1/rate.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{757,2},{213,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{213,73}</string>
+			</dict>
+			<key>rate1/yes_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{757,79},{115,58}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{115,58}</string>
+			</dict>
+			<key>rate1/yes_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{974,46},{40,40}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{40,40}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>rate1.png</string>
+			<key>realTextureFileName</key>
+			<string>rate1.png</string>
+			<key>size</key>
+			<string>{1016,637}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1016</integer>
+			<key>height</key>
+			<integer>637</integer>
+		</dict>
+	</dict>
+</plist>
