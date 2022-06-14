@@ -106,7 +106,7 @@ public class BaseScreen implements Screen {
     protected BaseDialog back() {
         back = false;
         BaseDialog back = dialogManager.back();
-        return null;
+        return back;
     }
 
     @Override

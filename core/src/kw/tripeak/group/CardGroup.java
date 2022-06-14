@@ -5,7 +5,9 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
+import com.kw.gdx.audio.Asset;
 import com.kw.gdx.listener.ButtonListener;
 import com.kw.gdx.utils.ImageUtils;
 
@@ -34,11 +36,11 @@ public class CardGroup extends Group {
     public CardGroup(Board board){
         this.index = board.getRank();
         setSize(144, 222);
-        imageBg = new Image(new Texture("images/cards/peak_front.png"));
-        imageFront = new Image(new Texture("images/cards/peak_back.png"));
+        imageBg = new Image(Asset.getAsset().getTexture("images/cards/peak_front.png"));
+        imageFront = new Image(Asset.getAsset().getTexture("images/cards/peak_back.png"));
         if (board.getSuit()==1||board.getSuit()==3){
-            cardData = new Image(new Texture("numTexture/r"+index+".png"));
-            smallCardData = new Image(new Texture("numTexture/sr"+index+".png"));
+            cardData = new Image(Asset.getAsset().getTexture("numTexture/r"+index+".png"));
+            smallCardData = new Image(Asset.getAsset().getTexture("numTexture/sr"+index+".png"));
         }else {
             cardData = new Image(new Texture("numTexture/b"+index+".png"));
             smallCardData = new Image(new Texture("numTexture/sb"+index+".png"));
@@ -58,7 +60,7 @@ public class CardGroup extends Group {
         cardData.setPosition(getWidth()/2,getHeight()/2-20,Align.center);
         smallCardData.setPosition(30,getHeight()-40,Align.center);
         huase.setPosition(getWidth()-30,getHeight()-40,Align.center);
-        addListener(new ButtonListener(){
+        addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 super.clicked(event, x, y);

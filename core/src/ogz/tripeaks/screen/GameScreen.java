@@ -17,7 +17,7 @@ import kw.tripeak.data.Board;
 import kw.tripeak.data.GameData;
 import kw.tripeak.data.PeakBean;
 import ogz.tripeaks.card.CardGroup;
-import ogz.tripeaks.dialog.FailedDialog;
+import kw.tripeak.dialog.FailedDialog;
 import ogz.tripeaks.dialog.SuccessDialog;
 
 public class GameScreen extends BaseScreen {
@@ -161,7 +161,12 @@ public class GameScreen extends BaseScreen {
                 return;
             }
         }
-        dialogManager.showDialog(new FailedDialog());
+        dialogManager.showDialog(new FailedDialog(new Runnable() {
+            @Override
+            public void run() {
+                setScreen(GameScreen.class);
+            }
+        }));
 //        System.out.println("failed ---------------");
         return;
     }

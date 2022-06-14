@@ -142,6 +142,7 @@ public class Asset implements Disposable {
     }
 
     public Texture getTexture(String path){
+        System.out.println(Gdx.files.internal(path).file().getAbsolutePath());
         if (!Gdx.files.internal(path).exists()){
             NLog.e("%s resouce not exist",path);
             return null;
