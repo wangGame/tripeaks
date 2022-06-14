@@ -263,7 +263,7 @@ public class ShaderProgram implements Disposable {
 	final static IntBuffer intbuf = BufferUtils.newIntBuffer(1);
 
 	/** @return the log info for the shader compilation and program linking stage. The shader needs to be bound for this method to
-	 *         have an com.kw.gdx.effect. */
+	 *         have an com.kw.gdx.animation.effect. */
 	public String getLog () {
 		if (isCompiled) {
 // Gdx.gl20.glGetProgramiv(program, GL20.GL_INFO_LOG_LENGTH, intbuf);

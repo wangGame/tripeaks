@@ -183,7 +183,7 @@ public class Button extends Table implements Disableable {
 		setBackground(background);
 	}
 
-	/** Returns the button's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(ButtonStyle)} is
+	/** Returns the button's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(ButtonStyle)} is
 	 * called. */
 	public ButtonStyle getStyle () {
 		return style;

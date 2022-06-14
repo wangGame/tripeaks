@@ -2,8 +2,8 @@ package kw.tripeak.screen;
 
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.annotation.ScreenResource;
-import com.kw.gdx.audio.Asset;
+import com.kw.gdx.asset.Asset;
+import com.kw.gdx.resource.annotation.ScreenResource;
 import com.kw.gdx.screen.BaseScreen;
 
 import kw.tripeak.asset.FontResource;
@@ -24,5 +24,7 @@ public class LoadingScreen extends BaseScreen {
             Asset.getAsset().getResource(FontResource.class);
 //            setScreen(MainScreen.class);
         })));
+
+
     }
 }

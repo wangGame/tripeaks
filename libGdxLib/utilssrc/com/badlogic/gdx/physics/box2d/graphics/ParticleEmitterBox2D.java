@@ -102,7 +102,7 @@ public class ParticleEmitterBox2D extends ParticleEmitter {
 		@Override
 		public void translate (float velocityX, float velocityY) {
 			/** If velocities squares summed is shorter than Epsilon it could lead ~0 length rayCast that cause nasty c++ assertion
-			 * inside box2d. This is so short distance that moving particle has no com.kw.gdx.effect so this return early. */
+			 * inside box2d. This is so short distance that moving particle has no com.kw.gdx.animation.effect so this return early. */
 			if ((velocityX * velocityX + velocityY * velocityY) < EPSILON) return;
 
 			/** Position offset is half of sprite texture size. */

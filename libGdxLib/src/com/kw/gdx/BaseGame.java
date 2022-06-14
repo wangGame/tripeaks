@@ -2,18 +2,16 @@ package com.kw.gdx;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.CpuPolygonSpriteBatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.esotericsoftware.spine.SkeletonRenderer;
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.annotation.AnnotationInfo;
-import com.kw.gdx.annotation.GameInfo;
-import com.kw.gdx.dialog.DialogManager;
+import com.kw.gdx.constant.Constant;
+import com.kw.gdx.resource.annotation.AnnotationInfo;
+import com.kw.gdx.resource.annotation.GameInfo;
 
 
 public class BaseGame extends Game {
@@ -32,19 +30,13 @@ public class BaseGame extends Game {
 
     private void initData() {
         GameInfo info = AnnotationInfo.checkClassAnnotation(this,GameInfo.class);
-        if (info!=null) {
-            Constant.WIDTH = info.width();
-            Constant.HIGHT = info.height();
-            Constant.batchType = info.batch();
-            Constant.viewportType = info.viewportType();
-        }
+        Constant.updateInfo(info);
     }
 
     protected void loadingView(){}
 
     private void initInstance(){
         Gdx.input.setCatchBackKey(true);
-
     }
 
     private void initViewport() {
@@ -63,15 +55,12 @@ public class BaseGame extends Game {
 
     private void viewPortResize(int width, int height) {
         stageViewport.update(width,height);
-        stageViewport.apply();
-        Constant.GAMEWIDTH = stageViewport.getWorldWidth();
-        Constant.GAMEHIGHT = stageViewport.getWorldHeight();
+        Constant.updateSize(stageViewport);
     }
 
     @Override
     public void render() {
-        Gdx.gl.glClearColor(Constant.viewColor.r, Constant.viewColor.g, Constant.viewColor.b, 1f);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+        ScreenUtils.clearScreen(Constant.viewColor.r, Constant.viewColor.g, Constant.viewColor.b, 1f);
         super.render();
     }
 
@@ -80,15 +69,17 @@ public class BaseGame extends Game {
     }
 
     public Batch getBatch() {
+//        batch = Constant.batchType == Constant.COUPOLYGONBATCH ?
+//                new CpuPolygonSpriteBatch() : Constant.batchType == Constant.SPRITEBATCH ?
+//                new SpriteBatch() : new CpuPolygonSpriteBatch();
         if (batch==null) {
             if (Constant.batchType == Constant.COUPOLYGONBATCH) {
                 batch = new CpuPolygonSpriteBatch();
             }else if (Constant.batchType == Constant.SPRITEBATCH){
                 batch = new SpriteBatch();
+            }else {
+                batch = new CpuPolygonSpriteBatch();
             }
-        }
-        if (batch== null){
-            batch = new CpuPolygonSpriteBatch();
         }
         return batch;
     }

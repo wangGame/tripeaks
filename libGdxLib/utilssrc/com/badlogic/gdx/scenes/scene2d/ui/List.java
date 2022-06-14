@@ -115,7 +115,7 @@ public class List<T> extends Widget implements Cullable {
 		invalidateHierarchy();
 	}
 
-	/** Returns the list's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(ListStyle)} is
+	/** Returns the list's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(ListStyle)} is
 	 * called. */
 	public ListStyle getStyle () {
 		return style;

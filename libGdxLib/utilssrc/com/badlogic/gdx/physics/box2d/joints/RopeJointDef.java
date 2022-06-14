@@ -33,6 +33,6 @@ public class RopeJointDef extends JointDef {
 	/** The local anchor point relative to bodyB's origin. **/
 	public final Vector2 localAnchorB = new Vector2(1, 0);
 
-	/** The maximum length of the rope. Warning: this must be larger than b2_linearSlop or the joint will have no com.kw.gdx.effect. */
+	/** The maximum length of the rope. Warning: this must be larger than b2_linearSlop or the joint will have no com.kw.gdx.animation.effect. */
 	public float maxLength = 0;
 }

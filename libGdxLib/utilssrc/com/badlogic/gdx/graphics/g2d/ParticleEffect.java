@@ -57,13 +57,13 @@ public class ParticleEffect implements Disposable {
 			emitters.get(i).start();
 	}
 
-	/** Resets the com.kw.gdx.effect so it can be started again like a new com.kw.gdx.effect. Any changes to
+	/** Resets the com.kw.gdx.animation.effect so it can be started again like a new com.kw.gdx.animation.effect. Any changes to
 	 * scale are reverted. See {@link #reset(boolean)}.*/
 	public void reset () {
 		reset(true);
 	}
 	
-	/** Resets the com.kw.gdx.effect so it can be started again like a new com.kw.gdx.effect.
+	/** Resets the com.kw.gdx.animation.effect so it can be started again like a new com.kw.gdx.animation.effect.
 	 * @param resetScaling Whether to restore the original size and motion parameters if they were scaled. Repeated scaling
 	 * and resetting may introduce error. */
 	public void reset (boolean resetScaling){
@@ -175,7 +175,7 @@ public class ParticleEffect implements Disposable {
 				if (reader.readLine() == null) break;
 			}
 		} catch (IOException ex) {
-			throw new GdxRuntimeException("Error loading com.kw.gdx.effect: " + effectFile, ex);
+			throw new GdxRuntimeException("Error loading com.kw.gdx.animation.effect: " + effectFile, ex);
 		} finally {
 			StreamUtils.closeQuietly(reader);
 		}
@@ -257,19 +257,19 @@ public class ParticleEffect implements Disposable {
 		return bounds;
 	}
 
-	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.effect. If this com.kw.gdx.effect originated from a
+	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.animation.effect. If this com.kw.gdx.animation.effect originated from a
 	 * {@link ParticleEffectPool}, the scale will be reset when it is returned to the pool. */
 	public void scaleEffect (float scaleFactor) {
 		scaleEffect(scaleFactor, scaleFactor, scaleFactor);
 	}
 	
-	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.effect. If this com.kw.gdx.effect originated from a
+	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.animation.effect. If this com.kw.gdx.animation.effect originated from a
 	 * {@link ParticleEffectPool}, the scale will be reset when it is returned to the pool. */
 	public void scaleEffect (float scaleFactor, float motionScaleFactor) {
 		scaleEffect(scaleFactor, scaleFactor, motionScaleFactor);
 	}
 
-	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.effect. If this com.kw.gdx.effect originated from a
+	/** Permanently scales all the size and motion parameters of all the emitters in this com.kw.gdx.animation.effect. If this com.kw.gdx.animation.effect originated from a
 	 * {@link ParticleEffectPool}, the scale will be reset when it is returned to the pool. */
 	public void scaleEffect (float xSizeScaleFactor, float ySizeScaleFactor, float motionScaleFactor) {
 		xSizeScale *= xSizeScaleFactor;

@@ -1,44 +1,38 @@
 package com.kw.gdx.screen;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
-import com.badlogic.gdx.utils.compression.lzma.Base;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.BannerManager;
-import com.kw.gdx.ads.BannerView;
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.annotation.AnnotationInfo;
-import com.kw.gdx.annotation.ScreenResource;
-import com.kw.gdx.cocosload.CocosResource;
-import com.kw.gdx.dialog.DialogManager;
-import com.kw.gdx.dialog.base.BaseDialog;
+import com.kw.gdx.utils.ads.BannerManager;
+import com.kw.gdx.constant.Constant;
+import com.kw.gdx.resource.annotation.AnnotationInfo;
+import com.kw.gdx.resource.annotation.ScreenResource;
+import com.kw.gdx.resource.cocosload.CocosResource;
+import com.kw.gdx.view.dialog.DialogManager;
+import com.kw.gdx.view.dialog.base.BaseDialog;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class BaseScreen implements Screen {
-    protected Stage stage;
+    protected final Stage stage;
     protected Group rootView;
     protected String viewpath;
     protected float offsetY;
     protected float offsetX;
     protected boolean back;
     protected BaseGame game;
-    protected DialogManager dialogManager;
-    private BannerManager bannerManager;
+    protected final DialogManager dialogManager;
+    private final BannerManager bannerManager;
 
     public BaseScreen(BaseGame game){
         this.game = game;

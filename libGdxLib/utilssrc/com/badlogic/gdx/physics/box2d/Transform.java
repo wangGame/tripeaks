@@ -62,7 +62,7 @@ public class Transform {
 		return v;
 	}
 
-	/** @return the position, modification of the vector has no com.kw.gdx.effect on the Transform */
+	/** @return the position, modification of the vector has no com.kw.gdx.animation.effect on the Transform */
 	public Vector2 getPosition () {
 		return position.set(vals[0], vals[1]);
 	}

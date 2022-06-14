@@ -3,7 +3,7 @@ package kw.tripeak.dialog;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
-import com.kw.gdx.dialog.base.BaseDialog;
+import com.kw.gdx.view.dialog.base.BaseDialog;
 import com.kw.gdx.listener.ButtonListener;
 
 import kw.tripeak.constant.LevelConfig;

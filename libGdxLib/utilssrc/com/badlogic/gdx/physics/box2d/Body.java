@@ -429,7 +429,7 @@ public class Body {
 	*/
 
 	/** Set the mass properties to override the mass properties of the fixtures. Note that this changes the center of mass position.
-	 * Note that creating or destroying fixtures can also alter the mass. This function has no com.kw.gdx.effect if the body isn't dynamic.
+	 * Note that creating or destroying fixtures can also alter the mass. This function has no com.kw.gdx.animation.effect if the body isn't dynamic.
 	 * @param data the mass properties. */
 	public void setMassData (MassData data) {
 		jniSetMassData(addr, data.mass, data.center.x, data.center.y, data.I);

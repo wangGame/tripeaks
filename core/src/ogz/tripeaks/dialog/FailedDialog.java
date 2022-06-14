@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.dialog.base.BaseDialog;
+import com.kw.gdx.view.dialog.base.BaseDialog;
 
 public class FailedDialog extends BaseDialog {
     public FailedDialog(){

@@ -650,12 +650,12 @@ public interface Input {
 	 * @return true or false. */
 	public boolean isKeyJustPressed(int key);
 
-	/** System dependent method to input a string of text. A com.kw.gdx.dialog box will be created with the given title and the given text as a
-	 * message for the user. Once the com.kw.gdx.dialog has been closed the provided {@link TextInputListener} will be called on the rendering
+	/** System dependent method to input a string of text. A com.kw.gdx.view.dialog box will be created with the given title and the given text as a
+	 * message for the user. Once the com.kw.gdx.view.dialog has been closed the provided {@link TextInputListener} will be called on the rendering
 	 * thread.
 	 * 
 	 * @param listener The TextInputListener.
-	 * @param title The title of the text input com.kw.gdx.dialog.
+	 * @param title The title of the text input com.kw.gdx.view.dialog.
 	 * @param text The message presented to the user. */
 	public void getTextInput(TextInputListener listener, String title, String text, String hint);
 
@@ -712,7 +712,7 @@ public interface Input {
 	/** @return the time of the event currently reported to the {@link InputProcessor}. */
 	public long getCurrentEventTime();
 
-	/** Sets whether the BACK button on Android should be caught. This will prevent the app from being paused. Will have no com.kw.gdx.effect
+	/** Sets whether the BACK button on Android should be caught. This will prevent the app from being paused. Will have no com.kw.gdx.animation.effect
 	 * on the desktop.
 	 * 
 	 * @param catchBack whether to catch the back button */
@@ -722,7 +722,7 @@ public interface Input {
 	public boolean isCatchBackKey();
 
 	/** Sets whether the MENU button on Android should be caught. This will prevent the onscreen keyboard to show up. Will have no
-	 * com.kw.gdx.effect on the desktop.
+	 * com.kw.gdx.animation.effect on the desktop.
 	 * 
 	 * @param catchMenu whether to catch the menu button */
 	public void setCatchMenuKey(boolean catchMenu);

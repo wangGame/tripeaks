@@ -1,10 +1,8 @@
 package kw.tripeak.asset;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.scenes.scene2d.utils.Disableable;
-import com.badlogic.gdx.utils.Disposable;
-import com.kw.gdx.annotation.FtResource;
-import com.kw.gdx.audio.Asset;
+import com.kw.gdx.asset.Asset;
+import com.kw.gdx.resource.annotation.FtResource;
 
 public class FontResource {
     private static FontResource instance;

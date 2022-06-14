@@ -25,6 +25,7 @@ import com.badlogic.gdx.graphics.Pixmap.Format;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
+import com.kw.gdx.constant.Constant;
 
 /** Class with static helper methods that provide access to the default OpenGL FrameBuffer. These methods can be used to get the
  * entire screen content or a portion thereof.
@@ -114,6 +115,10 @@ public final class ScreenUtils {
 			pixels.get(lines);
 		}
 		return lines;
+	}
 
+	public static void clearScreen(float r, float g, float b, float v){
+		Gdx.gl.glClearColor(r,g,b,v);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 	}
 }

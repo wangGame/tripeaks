@@ -126,7 +126,7 @@ public class Touchpad extends Widget {
 		invalidateHierarchy();
 	}
 
-	/** Returns the touchpad's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(TouchpadStyle)} is
+	/** Returns the touchpad's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(TouchpadStyle)} is
 	 * called. */
 	public TouchpadStyle getStyle () {
 		return style;

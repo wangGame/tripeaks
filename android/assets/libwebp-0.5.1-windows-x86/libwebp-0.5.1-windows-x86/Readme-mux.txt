@@ -9,7 +9,7 @@ Description:
 
 WebPMux: set of two libraries 'Mux' and 'Demux' for creation, extraction and
 manipulation of an extended format WebP file, which can have features like
-color profile, metadata and animation. Reference command-line tools 'webpmux'
+color profile, metadata and animation. Reference command-line com.tool.tools 'webpmux'
 and 'vwebp' as well as the WebP container specification
 'doc/webp-container-spec.txt' are also provided in this package.
 

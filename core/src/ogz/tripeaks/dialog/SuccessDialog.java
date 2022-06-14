@@ -8,10 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.dialog.base.BaseDialog;
+import com.kw.gdx.view.dialog.base.BaseDialog;
 import com.kw.gdx.listener.ButtonListener;
 
 import ogz.tripeaks.btn.MyImageButton;

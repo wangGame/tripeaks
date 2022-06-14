@@ -25,6 +25,7 @@ public class ImageUtils {
         Drawable drawable = image.getDrawable();
         float baseX = image.getX(Align.center);
         float baseY = image.getY(Align.center);
+
         if (drawable instanceof TextureRegionDrawable) {
             ((TextureRegionDrawable)drawable).setRegion(new TextureRegion(texture));
             image.setSize(texture.getWidth(),texture.getHeight());

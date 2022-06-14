@@ -72,7 +72,7 @@ public class ProgressBar extends Table {
     }
 
     /**
-     * Returns the progress bar's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(ProgressBarStyle)} is
+     * Returns the progress bar's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(ProgressBarStyle)} is
      * called.
      */
     public ProgressBarStyle getStyle() {

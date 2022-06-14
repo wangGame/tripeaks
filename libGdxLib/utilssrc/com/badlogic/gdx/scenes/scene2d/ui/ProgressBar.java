@@ -89,7 +89,7 @@ public class ProgressBar extends Widget implements Disableable {
 		invalidateHierarchy();
 	}
 
-	/** Returns the progress bar's style. Modifying the returned style may not have an com.kw.gdx.effect until
+	/** Returns the progress bar's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until
 	 * {@link #setStyle(ProgressBarStyle)} is called. */
 	public ProgressBarStyle getStyle () {
 		return style;

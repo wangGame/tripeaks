@@ -1,8 +1,8 @@
 package com.kw.gdx.listener;
 
 
-import com.kw.gdx.audio.AudioProcess;
-import com.kw.gdx.audio.AudioType;
+import com.kw.gdx.sound.AudioProcess;
+import com.kw.gdx.sound.AudioType;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class OrdinaryButtonListener extends ButtonListener {

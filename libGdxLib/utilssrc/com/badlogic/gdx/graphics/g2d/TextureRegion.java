@@ -17,7 +17,7 @@
 package com.badlogic.gdx.graphics.g2d;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.kw.gdx.log.NLog;
+import com.kw.gdx.utils.log.NLog;
 
 /** Defines a rectangular area of a texture. The coordinate system used has its origin in the upper left corner with the x-axis
  * pointing to the carRun and the y axis pointing downwards.

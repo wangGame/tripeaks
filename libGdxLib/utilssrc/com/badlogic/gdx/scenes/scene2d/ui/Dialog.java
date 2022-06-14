@@ -35,9 +35,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.FocusListener;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-/** Displays a com.kw.gdx.dialog, which is a modal window containing a content table with a button table underneath it. Methods are provided
+/** Displays a com.kw.gdx.view.dialog, which is a modal window containing a content table with a button table underneath it. Methods are provided
  * to add a com.kw.gdx.label to the content table and buttons to the button table, but any widgets can be added. When a button is clicked,
- * {@link #result(Object)} is called and the com.kw.gdx.dialog is removed from the stage.
+ * {@link #result(Object)} is called and the com.kw.gdx.view.dialog is removed from the stage.
  * @author Nathan Sweet */
 public class Dialog extends Window {
 	Table contentTable, buttonTable;
@@ -133,10 +133,10 @@ public class Dialog extends Window {
 		return buttonTable;
 	}
 
-	/** Adds a com.kw.gdx.label to the content table. The com.kw.gdx.dialog must have been constructed with a skin to use this method. */
+	/** Adds a com.kw.gdx.label to the content table. The com.kw.gdx.view.dialog must have been constructed with a skin to use this method. */
 	public Dialog text (String text) {
 		if (skin == null)
-			throw new IllegalStateException("This method may only be used if the com.kw.gdx.dialog was constructed with a Skin.");
+			throw new IllegalStateException("This method may only be used if the com.kw.gdx.view.dialog was constructed with a Skin.");
 		return text(text, skin.get(LabelStyle.class));
 	}
 
@@ -152,16 +152,16 @@ public class Dialog extends Window {
 	}
 
 	/** Adds a text button to the button table. Null will be passed to {@link #result(Object)} if this button is clicked. The
-	 * com.kw.gdx.dialog must have been constructed with a skin to use this method. */
+	 * com.kw.gdx.view.dialog must have been constructed with a skin to use this method. */
 	public Dialog button (String text) {
 		return button(text, null);
 	}
 
-	/** Adds a text button to the button table. The com.kw.gdx.dialog must have been constructed with a skin to use this method.
+	/** Adds a text button to the button table. The com.kw.gdx.view.dialog must have been constructed with a skin to use this method.
 	 * @param object The object that will be passed to {@link #result(Object)} if this button is clicked. May be null. */
 	public Dialog button (String text, Object object) {
 		if (skin == null)
-			throw new IllegalStateException("This method may only be used if the com.kw.gdx.dialog was constructed with a Skin.");
+			throw new IllegalStateException("This method may only be used if the com.kw.gdx.view.dialog was constructed with a Skin.");
 		return button(text, object, skin.get(TextButtonStyle.class));
 	}
 
@@ -184,7 +184,7 @@ public class Dialog extends Window {
 		return this;
 	}
 
-	/** {@link #pack() Packs} the com.kw.gdx.dialog and adds it to the stage with custom action which can be null for instant show */
+	/** {@link #pack() Packs} the com.kw.gdx.view.dialog and adds it to the stage with custom action which can be null for instant show */
 	public Dialog show (Stage stage, Action action) {
 		clearActions();
 		removeCaptureListener(ignoreTouchDown);
@@ -207,14 +207,14 @@ public class Dialog extends Window {
 		return this;
 	}
 
-	/** {@link #pack() Packs} the com.kw.gdx.dialog and adds it to the stage, centered with default fadeIn action */
+	/** {@link #pack() Packs} the com.kw.gdx.view.dialog and adds it to the stage, centered with default fadeIn action */
 	public Dialog show (Stage stage) {
 		show(stage, sequence(Actions.alpha(0), Actions.fadeIn(0.4f, Interpolation.fade)));
 		setPosition(Math.round((stage.getWidth() - getWidth()) / 2), Math.round((stage.getHeight() - getHeight()) / 2));
 		return this;
 	}
 
-	/** Hides the com.kw.gdx.dialog with the given action and then removes it from the stage. */
+	/** Hides the com.kw.gdx.view.dialog with the given action and then removes it from the stage. */
 	public void hide (Action action) {
 		Stage stage = getStage();
 		if (stage != null) {
@@ -234,7 +234,7 @@ public class Dialog extends Window {
 			remove();
 	}
 
-	/** Hides the com.kw.gdx.dialog. Called automatically when a button is clicked. The default implementation fades out the com.kw.gdx.dialog over 400
+	/** Hides the com.kw.gdx.view.dialog. Called automatically when a button is clicked. The default implementation fades out the com.kw.gdx.view.dialog over 400
 	 * milliseconds. */
 	public void hide () {
 		hide(fadeOut(0.4f, Interpolation.fade));
@@ -265,7 +265,7 @@ public class Dialog extends Window {
 		return this;
 	}
 
-	/** Called when a button is clicked. The com.kw.gdx.dialog will be hidden after this method returns unless {@link #cancel()} is called.
+	/** Called when a button is clicked. The com.kw.gdx.view.dialog will be hidden after this method returns unless {@link #cancel()} is called.
 	 * @param object The object specified when the button was added. */
 	protected void result (Object object) {
 	}

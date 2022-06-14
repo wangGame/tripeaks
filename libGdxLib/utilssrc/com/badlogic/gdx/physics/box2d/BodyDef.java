@@ -54,11 +54,11 @@ public class BodyDef {
 	/** The angular velocity of the body. **/
 	public float angularVelocity = 0;
 
-	/** Linear damping is use to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping com.kw.gdx.effect
+	/** Linear damping is use to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping com.kw.gdx.animation.effect
 	 * becomes sensitive to the time step when the damping parameter is large. **/
 	public float linearDamping = 0;
 
-	/** Angular damping is use to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping com.kw.gdx.effect
+	/** Angular damping is use to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping com.kw.gdx.animation.effect
 	 * becomes sensitive to the time step when the damping parameter is large. **/
 	public float angularDamping = 0;
 

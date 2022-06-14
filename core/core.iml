@@ -30,11 +30,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: ashley-1.7.4" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: gdx-1.9.9" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: ashley-1.7.4" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: gdx-1.9.9" level="project" />
-    <orderEntry type="module" module-name="libGdxLib" exported="" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
   </component>
 </module>

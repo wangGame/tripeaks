@@ -201,7 +201,7 @@ public class Window extends Table {
 		invalidateHierarchy();
 	}
 
-	/** Returns the window's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(WindowStyle)} is
+	/** Returns the window's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(WindowStyle)} is
 	 * called. */
 	public WindowStyle getStyle () {
 		return style;

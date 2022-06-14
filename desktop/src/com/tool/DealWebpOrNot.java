@@ -13,7 +13,7 @@ public class DealWebpOrNot {
 //	public static String sourcefolder="C:\\Users\\Doodle\\Desktop\\libhelper\\assets";
 	public static String targetfolder="C:\\Users\\Doodle\\Desktop\\libhelper\\webp\\webpo\\assets";
 
-	public static String webppath="C:\\Users\\Doodle\\Desktop\\gitlab\\CocosDemo\\libwebp-0.5.1-windows-x86\\bin\\cwebp";
+
 
 	public static void main (String[] args) throws Exception {
 
@@ -57,22 +57,10 @@ public class DealWebpOrNot {
 
 
 	public static void dealWebp(File child,File taget) throws Exception {
-//		for(File child:inputfile.listFiles()){
-//			if(child.isDirectory())
-//				dealWebp(child);
-//			else if(child.getName().endsWith(".png")||child.getName().endsWith(".jpg")){
-
-
-//				String output =child.getAbsolutePath().replace(source, target);
 		if(!taget.getParentFile().exists())
 			taget.getParentFile().mkdirs();
-//		if(taget.exists())
-//			throw new Exception();
-
-//			    cwebp %%a -o D:\save\%%~na.png
-
 		ArrayList<String> toexe=new ArrayList<String>();
-		toexe.add(webppath);
+		toexe.add("libwebp-0.5.1-windows-x86\\bin\\cwebp");
 		toexe.add("-m");
 		toexe.add("6");
 		toexe.add("-q");
@@ -81,9 +69,6 @@ public class DealWebpOrNot {
 		toexe.add("-o");
 		toexe.add(taget.getAbsolutePath());
 		cmd.execCommand(toexe);
-
-//			}
-//		}
 	}
 
 

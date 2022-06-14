@@ -1,17 +1,14 @@
 package ogz.tripeaks.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Queue;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.Constant;
+import com.kw.gdx.constant.Constant;
 import com.kw.gdx.listener.ButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 import java.util.ArrayList;

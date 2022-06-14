@@ -11,7 +11,7 @@ Description:
 
 WebP codec: library to encode and decode images in WebP format. This package
 contains the library that can be used in other programs to add WebP support,
-as well as the command line tools 'cwebp' and 'dwebp'.
+as well as the command line com.tool.tools 'cwebp' and 'dwebp'.
 
 See http://developers.google.com/speed/webp
 
@@ -37,7 +37,7 @@ test_ref.ppm     : the test.webp file decoded into the PPM format.
 Encoding tool:
 ==============
 
-The package contains tools for encoding (cwebp) and decoding (dwebp) images.
+The package contains com.tool.tools for encoding (cwebp) and decoding (dwebp) images.
 
 The easiest use should look like:
   cwebp input.png -q 80 -o output.webp

@@ -110,7 +110,7 @@ public class PolygonRegionLoader extends SynchronousAssetLoader<PolygonRegion, P
 	 * <p>
 	 * s 200.0, 100.0, ...
 	 * <p>
-	 * Lines not prefixed with "s" are ignored. PSH files can be created with external tools, eg: <br>
+	 * Lines not prefixed with "s" are ignored. PSH files can be created with external com.tool.tools, eg: <br>
 	 * https://code.google.com/p/libgdx-polygoneditor/ <br>
 	 * http://www.codeandweb.com/physicseditor/
 	 * @param file file handle to the shape definition file */

@@ -66,7 +66,7 @@ public interface Batch extends Disposable {
 	 * @see Color#toFloatBits() */
 	public void setColor(float color);
 
-	/** @return the rendering color of this Batch. Manipulating the returned instance has no com.kw.gdx.effect. */
+	/** @return the rendering color of this Batch. Manipulating the returned instance has no com.kw.gdx.animation.effect. */
 	public Color getColor();
 
 	/** @return the rendering color of this Batch in vertex format

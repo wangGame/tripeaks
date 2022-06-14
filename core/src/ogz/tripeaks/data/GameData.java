@@ -1,6 +1,6 @@
 package ogz.tripeaks.data;
 
-import com.kw.gdx.log.NLog;
+import com.kw.gdx.utils.log.NLog;
 
 import java.util.ArrayList;
 import java.util.Collections;

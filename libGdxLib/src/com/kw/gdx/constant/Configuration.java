@@ -1,7 +1,6 @@
 package com.kw.gdx.constant;
 
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.log.NLog;
+import com.kw.gdx.utils.log.NLog;
 
 public class Configuration {
     public static String device_name ="undefined";

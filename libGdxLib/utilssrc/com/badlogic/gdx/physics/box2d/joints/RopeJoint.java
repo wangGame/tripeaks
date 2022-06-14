@@ -20,7 +20,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Joint;
 import com.badlogic.gdx.physics.box2d.World;
 
-/** A rope joint enforces a maximum distance between two points on two bodies. It has no other com.kw.gdx.effect. Warning: if you attempt to
+/** A rope joint enforces a maximum distance between two points on two bodies. It has no other com.kw.gdx.animation.effect. Warning: if you attempt to
  * change the maximum length during the simulation you will get some non-physical behavior. A model that would allow you to
  * dynamically modify the length would have some sponginess, so I chose not to implement it that way. See b2DistanceJoint if you
  * want to dynamically control length. */

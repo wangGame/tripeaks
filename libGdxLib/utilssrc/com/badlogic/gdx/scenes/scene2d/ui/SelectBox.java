@@ -120,7 +120,7 @@ public class SelectBox<T> extends Widget implements Disableable {
 		invalidateHierarchy();
 	}
 
-	/** Returns the select box's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(SelectBoxStyle)}
+	/** Returns the select box's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(SelectBoxStyle)}
 	 * is called. */
 	public SelectBoxStyle getStyle () {
 		return style;

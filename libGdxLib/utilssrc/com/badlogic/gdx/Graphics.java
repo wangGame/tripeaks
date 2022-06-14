@@ -242,7 +242,7 @@ public interface Graphics {
 	 *  the menu bar.
 	 *
 	 *  Note that immediate behavior of this method may vary depending on the implementation. It
-	 *  may be necessary for the window to be recreated in order for the changes to take com.kw.gdx.effect.
+	 *  may be necessary for the window to be recreated in order for the changes to take com.kw.gdx.animation.effect.
 	 *  Consult the documentation for the backend in use for more information.
 	 *
 	 *  Supported on all GDX desktop backends and on Android (to disable the menu bar).
@@ -254,7 +254,7 @@ public interface Graphics {
 	/** Sets whether or not the window should be resizable. Ignored on Android.
 	 *
 	 *  Note that immediate behavior of this method may vary depending on the implementation. It
-	 *  may be necessary for the window to be recreated in order for the changes to take com.kw.gdx.effect.
+	 *  may be necessary for the window to be recreated in order for the changes to take com.kw.gdx.animation.effect.
 	 *  Consult the documentation for the backend in use for more information.
 	 *
 	 *  Supported on all GDX desktop backends.

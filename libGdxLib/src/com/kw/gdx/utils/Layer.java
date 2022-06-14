@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.kw.gdx.ads.Constant;
+import com.kw.gdx.constant.Constant;
 
 public class Layer {
     public static Image getShadow(){

@@ -87,39 +87,39 @@ public interface Sound extends Disposable {
 	public void dispose();
 
 	/** Stops the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}. If the sound is no longer
-	 * playing, this has no com.kw.gdx.effect.
+	 * playing, this has no com.kw.gdx.animation.effect.
 	 * @param soundId the sound id */
 	public void stop(long soundId);
 
 	/** Pauses the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}. If the sound is no
-	 * longer playing, this has no com.kw.gdx.effect.
+	 * longer playing, this has no com.kw.gdx.animation.effect.
 	 * @param soundId the sound id */
 	public void pause(long soundId);
 
 	/** Resumes the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}. If the sound is not
-	 * paused, this has no com.kw.gdx.effect.
+	 * paused, this has no com.kw.gdx.animation.effect.
 	 * @param soundId the sound id */
 	public void resume(long soundId);
 
-	/** Sets the sound instance with the given id to be looping. If the sound is no longer playing this has no com.kw.gdx.effect.s
+	/** Sets the sound instance with the given id to be looping. If the sound is no longer playing this has no com.kw.gdx.animation.effect.s
 	 * @param soundId the sound id
 	 * @param looping whether to loop or not. */
 	public void setLooping(long soundId, boolean looping);
 
 	/** Changes the pitch multiplier of the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}.
-	 * If the sound is no longer playing, this has no com.kw.gdx.effect.
+	 * If the sound is no longer playing, this has no com.kw.gdx.animation.effect.
 	 * @param soundId the sound id
 	 * @param pitch the pitch multiplier, 1 == default, >1 == faster, <1 == slower, the value has to be between 0.5 and 2.0 */
 	public void setPitch(long soundId, float pitch);
 
 	/** Changes the volume of the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}. If the
-	 * sound is no longer playing, this has no com.kw.gdx.effect.
+	 * sound is no longer playing, this has no com.kw.gdx.animation.effect.
 	 * @param soundId the sound id
 	 * @param volume the volume in the range 0 (silent) to 1 (max volume). */
 	public void setVolume(long soundId, float volume);
 
 	/** Sets the panning and volume of the sound instance with the given id as returned by {@link #play()} or {@link #play(float)}.
-	 * If the sound is no longer playing, this has no com.kw.gdx.effect. Note that panning only works for mono sounds, not for stereo sounds!
+	 * If the sound is no longer playing, this has no com.kw.gdx.animation.effect. Note that panning only works for mono sounds, not for stereo sounds!
 	 * @param soundId the sound id
 	 * @param pan panning in the range -1 (full left) to 1 (full carRun). 0 is center position.
 	 * @param volume the volume in the range [0,1]. */

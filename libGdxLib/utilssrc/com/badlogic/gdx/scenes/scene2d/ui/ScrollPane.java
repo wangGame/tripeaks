@@ -306,7 +306,7 @@ public class ScrollPane extends WidgetGroup {
 		invalidateHierarchy();
 	}
 
-	/** Returns the scroll pane's style. Modifying the returned style may not have an com.kw.gdx.effect until
+	/** Returns the scroll pane's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until
 	 * {@link #setStyle(ScrollPaneStyle)} is called. */
 	public ScrollPaneStyle getStyle () {
 		return style;

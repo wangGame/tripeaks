@@ -1,7 +1,7 @@
 package com.kw.gdx.listener;
 
-import com.kw.gdx.audio.AudioProcess;
-import com.kw.gdx.audio.AudioType;
+import com.kw.gdx.sound.AudioProcess;
+import com.kw.gdx.sound.AudioType;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;

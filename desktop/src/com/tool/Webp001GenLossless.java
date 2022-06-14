@@ -35,9 +35,9 @@ public class Webp001GenLossless {
 				toexe.add("6");
 				toexe.add("-q");
 				toexe.add("90");
-				toexe.add(child.getAbsolutePath());
+				toexe.add(child.getPath());
 				toexe.add("-o");
-				toexe.add("out/qqew.png");
+				toexe.add("out/"+child.getName());
 				cmd.execCommand(toexe);
 				System.out.println();
 			}

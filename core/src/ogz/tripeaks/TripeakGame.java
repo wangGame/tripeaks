@@ -1,10 +1,8 @@
 package ogz.tripeaks;
 
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.annotation.GameInfo;
-
-import javax.naming.CompositeName;
+import com.kw.gdx.constant.Constant;
+import com.kw.gdx.resource.annotation.GameInfo;
 
 import ogz.tripeaks.screen.LoadingScreen;
 

@@ -31,7 +31,7 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.ObjectSet;
 import com.badlogic.gdx.utils.StreamUtils;
-import com.kw.gdx.log.NLog;
+import com.kw.gdx.utils.log.NLog;
 
 import java.io.BufferedReader;
 import java.io.IOException;

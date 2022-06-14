@@ -211,7 +211,7 @@ public class TextField extends Widget implements Disableable {
 		invalidateHierarchy();
 	}
 
-	/** Returns the text field's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(TextFieldStyle)}
+	/** Returns the text field's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(TextFieldStyle)}
 	 * is called. */
 	public TextFieldStyle getStyle () {
 		return style;

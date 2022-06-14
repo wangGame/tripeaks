@@ -54,7 +54,7 @@ public class CheckBox extends TextButton {
 		this.style = (CheckBoxStyle)style;
 	}
 
-	/** Returns the checkbox's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(ButtonStyle)} is
+	/** Returns the checkbox's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(ButtonStyle)} is
 	 * called. */
 	public CheckBoxStyle getStyle () {
 		return style;

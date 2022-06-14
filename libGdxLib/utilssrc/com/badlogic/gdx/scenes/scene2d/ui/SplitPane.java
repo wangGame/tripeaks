@@ -131,7 +131,7 @@ public class SplitPane extends WidgetGroup {
 		invalidateHierarchy();
 	}
 
-	/** Returns the split pane's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(SplitPaneStyle)}
+	/** Returns the split pane's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(SplitPaneStyle)}
 	 * is called. */
 	public SplitPaneStyle getStyle () {
 		return style;

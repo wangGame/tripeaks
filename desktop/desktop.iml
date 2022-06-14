@@ -37,12 +37,8 @@
     <orderEntry type="library" exported="" name="Gradle: gdx-backend-lwjgl-natives" level="project" />
     <orderEntry type="library" exported="" name="Gradle: gdx-natives" level="project" />
     <orderEntry type="library" exported="" name="Gradle: gdx-tools" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: ashley-1.7.4" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: gdx-1.9.9" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: ashley-1.7.4" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: gdx-1.9.9" level="project" />
-    <orderEntry type="module" module-name="core" exported="" />
-    <orderEntry type="module" module-name="libGdxLib" exported="" />
     <orderEntry type="module" module-name="core" exported="" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
   </component>

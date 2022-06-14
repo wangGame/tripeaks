@@ -87,7 +87,7 @@ public class ShadowLabel extends Widget {
         invalidateHierarchy();
     }
 
-    /** Returns the com.kw.gdx.label's style. Modifying the returned style may not have an com.kw.gdx.effect until {@link #setStyle(Label.LabelStyle)} is
+    /** Returns the com.kw.gdx.label's style. Modifying the returned style may not have an com.kw.gdx.animation.effect until {@link #setStyle(Label.LabelStyle)} is
      * called. */
     public Label.LabelStyle getStyle () {
         return style;
