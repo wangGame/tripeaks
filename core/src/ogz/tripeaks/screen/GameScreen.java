@@ -1,13 +1,10 @@
 package ogz.tripeaks.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Queue;
 import com.kw.gdx.BaseGame;
@@ -20,7 +17,7 @@ import kw.tripeak.data.Board;
 import kw.tripeak.data.GameData;
 import kw.tripeak.data.PeakBean;
 import ogz.tripeaks.card.CardGroup;
-import ogz.tripeaks.dialog.FailedDialog;
+import kw.tripeak.dialog.FailedDialog;
 import ogz.tripeaks.dialog.SuccessDialog;
 
 public class GameScreen extends BaseScreen {
@@ -164,7 +161,12 @@ public class GameScreen extends BaseScreen {
                 return;
             }
         }
-        dialogManager.showDialog(new FailedDialog());
+        dialogManager.showDialog(new FailedDialog(new Runnable() {
+            @Override
+            public void run() {
+                setScreen(GameScreen.class);
+            }
+        }));
 //        System.out.println("failed ---------------");
         return;
     }

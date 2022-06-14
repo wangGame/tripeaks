@@ -6,18 +6,15 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Align;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.BannerManager;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 
 import ogz.tripeaks.btn.MyImageButton;
-import ogz.tripeaks.dialog.FailedDialog;
 import ogz.tripeaks.dialog.SuccessDialog;
 
 public class MainScreen extends BaseScreen {

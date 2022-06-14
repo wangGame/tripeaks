@@ -1,8 +1,10 @@
 package kw.tripeak;
 
+import com.badlogic.gdx.physics.box2d.Contact;
 import com.kw.gdx.BaseGame;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.GameInfo;
+import com.kw.gdx.constant.Configuration;
 
 import kw.tripeak.screen.LoadingScreen;
 

@@ -52,46 +52,33 @@ public abstract class BaseCocoStudioUIEditor {
 	protected Map<Actor, Action> actorActionMap;
 	protected Map<String, Array<Actor>> actors;
 	protected Map<Integer, Actor> actionActors;
-
 	protected Map<String, BaseWidgetParser> parsers;
 
 	public BaseCocoStudioUIEditor (FileHandle jsonFile) {
 		parsers = new HashMap<String, BaseWidgetParser>();
-
 		addParser(new CCNode());//节点
 		addParser(new CCParticle());//粒子
 		addParser(new CCSpriteView());//精灵
-
 		addParser(new CCButton());//按钮
 		addParser(new CCCheckBox());//复选框
 		addParser(new CCImageView());//图片
-
 		addParser(new CCLabel());//文本
 		addParser(new CCLabelBMFont());//艺术字体
-
 		addParser(new CCLoadingBar());//进度条
 		addParser(new CCSlider());//滑动条
 		addParser(new CCTextField());//输入框
-
 		addParser(new CCPanel());//基础容器
 		addParser(new CCPageView());//翻页容器
 		addParser(new CCScrollView());//滚动容器
-
 		addParser(new CCTextAtlas());//?
 		addParser(new CCLabelAtlas());//?
 		addParser(new CCTImageView());//?
-
 		addParser(new CCProjectNode());//项目节点
-
 		addParser(new CCLayer());//图层
-
 		actors = new HashMap<String, Array<Actor>>();
 		actionActors = new HashMap<Integer, Actor>();
-
 		//animations = new HashMap<String, Map<Actor, Action>>();
-
 		actorActionMap = new HashMap<Actor, Action>();
-
 		String json = jsonFile.readString("utf-8");
 		Json jj = new Json();
 		jj.setTypeName("ctype");
@@ -119,24 +106,19 @@ public abstract class BaseCocoStudioUIEditor {
 	public abstract BaseCocoStudioUIEditor findCoco (FileData fileData);
 
 	public Actor parseWidget (Group parent, ObjectData widget) {
-
 		String className = widget.ctype;
 		BaseWidgetParser parser = parsers.get(className);
-
 		if (parser == null) {
 			Gdx.app.debug(widget.ctype, "not support Widget:" + className);
 			return null;
 		}
 		Actor actor = parser.parse(this, widget);
-
 		actor = parser.commonParse(this, widget, parent, actor);
-
 		return actor;
 	}
 
 	public Group createGroup () {
 		Actor actor = parseWidget(null, export.Content.Content.ObjectData);
-
 		actorActionMap.clear();
 		actors.clear();
 		actionActors.clear();

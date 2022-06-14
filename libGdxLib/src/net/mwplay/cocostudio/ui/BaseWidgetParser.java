@@ -107,23 +107,15 @@ public abstract class BaseWidgetParser<T extends ObjectData> {
 		if (widget.RotationSkewX != 0 && widget.RotationSkewX == widget.RotationSkewY) {
 			actor.setRotation(360 - widget.RotationSkewX % 360);
 		}
-
 		// 设置可见
 		actor.setVisible(widget.VisibleForFrame);
-
 		Color color = NUtils.getColor(widget.CColor, widget.Alpha);
-
 		actor.setColor(color);
-
 		actor.setTouchable(deduceTouchable(actor, widget));
-
 		// callback
-
 		addCallback(actor, widget);
 		// callback
-
 		addActor(editor, actor, widget);
-
 		if (widget.Children == null || widget.Children.size() == 0) {
 			//添加Action
 			parseAction(actor, widget);

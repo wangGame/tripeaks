@@ -1,19 +1,30 @@
 package kw.tripeak.screen;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.SnapshotArray;
 import com.kw.gdx.BaseGame;
 import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.ScreenResource;
+import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 
+import kw.tripeak.dialog.SettingDialog;
+import kw.tripeak.dialog.SuccessDialog;
 import kw.tripeak.group.GameActor;
+import kw.tripeak.pref.TripeakPreferece;
 
 @ScreenResource("cocos/MainScene.json")
 public class MainScreen extends BaseScreen {
+    private Label coinNum;
     public MainScreen(BaseGame game) {
         super(game);
     }
@@ -21,6 +32,7 @@ public class MainScreen extends BaseScreen {
     @Override
     public void initView() {
         super.initView();
+        int currentLevel = TripeakPreferece.getInstance().getCurrentLevel();
         Actor panel_1 = rootView.findActor("scrollpaneBg");
         Group panel_2 = rootView.findActor("mapPoint");
         float v = Constant.GAMEHIGHT / panel_1.getHeight();
@@ -54,5 +66,32 @@ public class MainScreen extends BaseScreen {
             });
             panel_2.addActor(actor);
         }
+        Actor actor = panel_2.findActor("level"+currentLevel);
+        Image point = new Image(new Texture("images/point.png"));
+        panel_2.addActor(point);
+        point.setPosition(actor.getX(Align.center)+37,actor.getY(Align.center)+20,Align.bottom);
+        float baseX = actor.getX(Align.center)+37;
+        float baseY = actor.getY(Align.center)+20;
+        point.addAction(Actions.forever(
+                Actions.sequence(
+                    Actions.moveToAligned( baseX ,baseY+10,Align.bottom,0.2F),
+                    Actions.moveToAligned(baseX,baseY+0,Align.bottom,0.2F),
+                    Actions.moveToAligned(baseX,baseY-10,Align.bottom,0.2F),
+                    Actions.moveToAligned(baseX,baseY,Align.bottom,0.2F)
+                )));
+        point.setTouchable(Touchable.disabled);
+        Actor setting_btn = findActor("setting_btn");
+        setting_btn.setTouchable(Touchable.enabled);
+        setting_btn.addListener(new OrdinaryButtonListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+                dialogManager.showDialog(new SettingDialog());
+            }
+        });
+
+        Group coinGroup = findActor("coinGroup");
+        Label coinNum = coinGroup.findActor("coinNum");
+        coinNum.setText(TripeakPreferece.getInstance().getScoreNum());
     }
 }

@@ -27,11 +27,14 @@ import com.badlogic.gdx.assets.loaders.TextureLoader;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.StringBuilder;
 import com.ui.ManagerUIEditor;
+import com.ui.plist.MiniPlistAtlasLoader;
 import com.ui.plist.PlistAtlas;
 import com.ui.plist.PlistAtlasLoader;
+import com.ui.plist.PlistAtlasParameter;
 
 import java.util.List;
 
@@ -47,7 +50,7 @@ public class ManagerUILoader extends AsynchronousAssetLoader<ManagerUIEditor, Ma
 		}
 	};
 
-	public static PlistAtlasLoader.PlistAtlasParameter plistAtlasParameter = new PlistAtlasLoader.PlistAtlasParameter() {
+	public static PlistAtlasParameter plistAtlasParameter = new PlistAtlasParameter() {
 		{
 //			if (Configuration.device_state != Configuration.DeviceState.poor) {
 //				genMipMaps = true;
@@ -101,7 +104,6 @@ public class ManagerUILoader extends AsynchronousAssetLoader<ManagerUIEditor, Ma
 
 		Array<AssetDescriptor> assetDescriptors = new Array<AssetDescriptor>();
 		List<String> list = cocoStudioUIEditor.getResources();
-//		new File(cocoStudioUIEditor.filedir+"+name)
 		for (String name : list) {
 			String fname = cocoStudioUIEditor.filedir + name;
 			fname = dealDot(fname);
@@ -113,6 +115,8 @@ public class ManagerUILoader extends AsynchronousAssetLoader<ManagerUIEditor, Ma
 				assetDescriptors.add(new AssetDescriptor<PlistAtlas>(fname, PlistAtlas.class, plistAtlasParameter));
 			else if (name.endsWith(".fnt"))
 				assetDescriptors.add(new AssetDescriptor<BitmapFont>(fname, BitmapFont.class, bitmapFontParameter));
+			else if (name.endsWith(".atlas"))
+				assetDescriptors.add(new AssetDescriptor<TextureAtlas>(fname, TextureAtlas.class));
 			else
 				Gdx.app.debug(ManagerUILoader.class.getName(), "Unsolved resource");
 		}

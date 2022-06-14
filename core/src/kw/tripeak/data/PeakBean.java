@@ -7,6 +7,10 @@ public class PeakBean {
     private ArrayList<Board> boards;
 
     public int getNum() {
+        System.out.println(num);
+        if (num == 1){
+            num = 13;
+        }
         return num;
     }
 

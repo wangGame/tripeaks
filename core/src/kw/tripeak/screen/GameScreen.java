@@ -1,27 +1,32 @@
 package kw.tripeak.screen;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Queue;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.Constant;
 import com.kw.gdx.annotation.ScreenResource;
+import com.kw.gdx.dialog.base.BaseDialog;
 import com.kw.gdx.listener.ButtonListener;
+import com.kw.gdx.listener.OrdinaryButtonListener;
 import com.kw.gdx.screen.BaseScreen;
 import java.util.ArrayList;
-import java.util.Collections;
 
 import kw.tripeak.data.Board;
 import kw.tripeak.data.GameData;
 import kw.tripeak.data.PeakBean;
+import kw.tripeak.dialog.SettingDialog;
 import kw.tripeak.dialog.SuccessDialog;
 import kw.tripeak.group.CardGroup;
-import ogz.tripeaks.dialog.FailedDialog;
+import kw.tripeak.dialog.FailedDialog;
+import kw.tripeak.pref.TripeakPreferece;
 
 @ScreenResource("cocos/GameScreen.json")
 public class GameScreen extends BaseScreen {
@@ -30,6 +35,7 @@ public class GameScreen extends BaseScreen {
     private Queue<CardGroup> stack = new Queue<>();
     private ArrayList<CardGroup> packAll = new ArrayList<>();
     private ArrayList<String> livePeack = new ArrayList<>();
+    private Label label;
 
     public GameScreen(BaseGame game) {
         super(game);
@@ -39,10 +45,13 @@ public class GameScreen extends BaseScreen {
     public void initView() {
         super.initView();
         GameData data = new GameData();
+        findActor("starProcess").setVisible(false);
         Group tempGroup = findActor("peakGroup");
         tempGroup.setY(tempGroup.getY() - 140);
-//        tempGroup.setPosition(Constant.GAMEWIDTH/2,Constant.GAMEHIGHT/2,Align.center);
         PeakBean data1 = data.getData();
+        Group coinGroup = findActor("coinGroup");
+        Label coin_num = coinGroup.findActor("coin_num");
+        coin_num.setText(TripeakPreferece.getInstance().getScoreNum());
         for (Board board : data1.getBoards()) {
             CardGroup cardGroup = new CardGroup(board);
             tempGroup.addActor(cardGroup);
@@ -53,12 +62,31 @@ public class GameScreen extends BaseScreen {
                     int ans2 = (cardGroup.packNum() - 1) % 13;
                     ans1 = ans1 < 0 ? ans1+13:ans1;
                     ans2 = ans2 < 0 ? ans2+13:ans2;
-                    System.out.println(cardGroup.packNum()+"  "+ans1);
-                    System.out.println(cardGroup.packNum()+"  "+ans2);
                     System.out.println(current);
                     if (ans1 == current || ans2 == current) {
-                        update(cardGroup);
+//
+                        TripeakPreferece.getInstance().updateScore(100);
+                        coin_num.setText(TripeakPreferece.getInstance().getScoreNum());
                         current = cardGroup.packNum();
+
+                        Actor basePeak = findActor("basePeak");
+                        float x = basePeak.getX(Align.center);
+                        float y = basePeak.getY(Align.center);
+                        Vector2 vector2 = new Vector2(x,y);
+                        rootView.localToStageCoordinates(vector2);
+                        tempGroup.stageToLocalCoordinates(vector2);
+                        cardGroup.toFront();
+                        cardGroup.addAction(Actions.sequence(
+                                Actions.moveToAligned(vector2.x,vector2.y,Align.center,0.3f),
+                                Actions.run(()->update(cardGroup))));
+                    }else {
+                        cardGroup.addAction(Actions.repeat(2,
+                                Actions.sequence(
+                                    Actions.rotateTo(20,0.1F),
+                                    Actions.rotateTo(0,0.1F),
+                                    Actions.rotateTo(-20,0.1F),
+                                    Actions.rotateTo(0,0.1F)
+                                )));
                     }
                     if (packAll.size() == 0){
                         System.out.println("success");
@@ -92,14 +120,12 @@ public class GameScreen extends BaseScreen {
         baseGroup = new CardGroup(board1);
         basePeak.addActor(baseGroup);
         basePeak.setX(340);
-        basePeak.setDebug(true);
         baseGroup.setPosition(basePeak.getWidth()/2,basePeak.getHeight()/2,Align.center);
         baseGroup.select(true);
         current = baseGroup.packNum();
         baseGroup.setTouchable(Touchable.disabled);
 
         Group diPack = findActor("freePeak");
-        diPack.setDebug(true);
         diPack.setX(960,Align.center);
         Group groupTemp = new Group();
         groupTemp.setHeight(diPack.getHeight());
@@ -140,6 +166,15 @@ public class GameScreen extends BaseScreen {
             }
         });
 
+        Actor setting_btn = findActor("setting_btn_7");
+        setting_btn.setTouchable(Touchable.enabled);
+        setting_btn.addListener(new OrdinaryButtonListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+                dialogManager.showDialog(new SettingDialog());
+            }
+        });
 //        extracted(data);
     }
 
@@ -171,7 +206,12 @@ public class GameScreen extends BaseScreen {
                 return;
             }
         }
-        dialogManager.showDialog(new FailedDialog());
+        dialogManager.showDialog(new FailedDialog(new Runnable() {
+            @Override
+            public void run() {
+                setScreen(GameScreen.class);
+            }
+        }));
 //        System.out.println("failed ---------------");
         return;
     }
@@ -179,10 +219,19 @@ public class GameScreen extends BaseScreen {
     public void update(CardGroup currentGroup){
         currentGroup.remove();
         packAll.remove(currentGroup);
-        System.out.println(livePeack.size()+"----------------------");
         livePeack.remove(currentGroup.getid()+"");
-        System.out.println(livePeack.size()+"----------------------"+currentGroup.getid());
         baseGroup.update(currentGroup.getIndex(),currentGroup.getSuit());
         updatePeak();
+    }
+
+    @Override
+    protected BaseDialog back() {
+        BaseDialog back = super.back();
+        if (back instanceof SuccessDialog ||back instanceof FailedDialog){
+            setScreen(GameScreen.class);
+        }else {
+            setScreen(MainScreen.class);
+        }
+        return back;
     }
 }
