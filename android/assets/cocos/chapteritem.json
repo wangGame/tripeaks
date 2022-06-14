@@ -1,0 +1,630 @@
+{
+  "ID": "4b07185b-bd29-473e-bd5a-cbf37aa9e309",
+  "Version": "3.10.0.0",
+  "Name": "chapteritem",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 65,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "chapter/itbg1.png",
+              "Plist" : "plist/test.atlas"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 450.0033,
+              "Y": 99.5008
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4167,
+              "Y": 0.0518
+            },
+            "PreSize": {
+              "X": 0.8333,
+              "Y": 0.1031
+            },
+            "LeftMargin": 0.0033,
+            "RightMargin": 179.9967,
+            "TopMargin": 1721.4993,
+            "BottomMargin": 0.5008,
+            "Tag": 76,
+            "ActionTag": -1495179314,
+            "Size": {
+              "X": 900.0,
+              "Y": 198.0
+            },
+            "Name": "itembg",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": -0.0443,
+              "Y": 0.0425
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.8333,
+              "Y": 0.1042
+            },
+            "LeftMargin": -0.0443,
+            "RightMargin": 180.0443,
+            "TopMargin": 1719.9575,
+            "BottomMargin": 0.0425,
+            "Tag": 77,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/shadow.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 39,
+                "Scale9OriginY": 66,
+                "Scale9Width": 42,
+                "Scale9Height": 68,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 450.0,
+                  "Y": 99.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4975
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.995
+                },
+                "TopMargin": 1.0,
+                "Tag": 36,
+                "ActionTag": -386118010,
+                "Size": {
+                  "X": 900.0,
+                  "Y": 199.0
+                },
+                "Name": "shadow",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/lock.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 88.5009,
+                  "Y": 110.9987
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0983,
+                  "Y": 0.555
+                },
+                "PreSize": {
+                  "X": 0.0722,
+                  "Y": 0.37
+                },
+                "LeftMargin": 56.0009,
+                "RightMargin": 778.9991,
+                "TopMargin": 52.0013,
+                "BottomMargin": 73.9987,
+                "Tag": 66,
+                "ActionTag": -1264367186,
+                "Size": {
+                  "X": 65.0,
+                  "Y": 74.0
+                },
+                "Name": "lock",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/strar_5.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 502.0033,
+                  "Y": 109.4992
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5578,
+                  "Y": 0.5475
+                },
+                "PreSize": {
+                  "X": 0.0756,
+                  "Y": 0.305
+                },
+                "LeftMargin": 468.0033,
+                "RightMargin": 363.9967,
+                "TopMargin": 60.0008,
+                "BottomMargin": 78.9992,
+                "Tag": 67,
+                "ActionTag": -873381217,
+                "Size": {
+                  "X": 68.0,
+                  "Y": 61.0
+                },
+                "Name": "strar_6",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/to_unlock.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 697.4974,
+                  "Y": 103.4992
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.775,
+                  "Y": 0.5175
+                },
+                "PreSize": {
+                  "X": 0.3256,
+                  "Y": 0.245
+                },
+                "LeftMargin": 550.9974,
+                "RightMargin": 56.0026,
+                "TopMargin": 72.0008,
+                "BottomMargin": 78.9992,
+                "Tag": 68,
+                "ActionTag": -1360416265,
+                "Size": {
+                  "X": 293.0,
+                  "Y": 49.0
+                },
+                "Name": "to_unlock",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/collect_12.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 260.4995,
+                  "Y": 103.4982
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2894,
+                  "Y": 0.5175
+                },
+                "PreSize": {
+                  "X": 0.2611,
+                  "Y": 0.245
+                },
+                "LeftMargin": 142.9995,
+                "RightMargin": 522.0005,
+                "TopMargin": 72.0018,
+                "BottomMargin": 78.9982,
+                "Tag": 69,
+                "ActionTag": -32986909,
+                "Size": {
+                  "X": 235.0,
+                  "Y": 49.0
+                },
+                "Name": "collect_12",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -1100555811,
+            "Size": {
+              "X": 900.0,
+              "Y": 200.0
+            },
+            "Name": "lock",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": -0.0445,
+              "Y": 0.0425
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.8333,
+              "Y": 0.1036
+            },
+            "LeftMargin": -0.0445,
+            "RightMargin": 180.0445,
+            "TopMargin": 1720.9575,
+            "BottomMargin": 0.0425,
+            "Tag": 78,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/juxing_2_4.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 721.512,
+                  "Y": 61.4952
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8017,
+                  "Y": 0.309
+                },
+                "PreSize": {
+                  "X": 0.3856,
+                  "Y": 0.5075
+                },
+                "LeftMargin": 548.012,
+                "RightMargin": 4.988,
+                "TopMargin": 87.0048,
+                "BottomMargin": 10.9952,
+                "Tag": 74,
+                "ActionTag": -696521460,
+                "Size": {
+                  "X": 347.0,
+                  "Y": 101.0
+                },
+                "Name": "juxing_2_4",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/24_24_4.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 778.0168,
+                  "Y": 54.5013
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8645,
+                  "Y": 0.2739
+                },
+                "PreSize": {
+                  "X": 0.1689,
+                  "Y": 0.2161
+                },
+                "LeftMargin": 702.0168,
+                "RightMargin": 45.9832,
+                "TopMargin": 122.9987,
+                "BottomMargin": 33.0013,
+                "Tag": 72,
+                "ActionTag": -974481059,
+                "Size": {
+                  "X": 152.0,
+                  "Y": 43.0
+                },
+                "Name": "24_24",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/strar_5.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 648.0098,
+                  "Y": 62.4978
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.72,
+                  "Y": 0.3141
+                },
+                "PreSize": {
+                  "X": 0.0756,
+                  "Y": 0.3065
+                },
+                "LeftMargin": 614.0098,
+                "RightMargin": 217.9902,
+                "TopMargin": 106.0022,
+                "BottomMargin": 31.9978,
+                "Tag": 73,
+                "ActionTag": 1795817581,
+                "Size": {
+                  "X": 68.0,
+                  "Y": 61.0
+                },
+                "Name": "strar_5",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "chapter/medpurple.png",
+                  "Plist" : "plist/test.atlas"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 170.0027,
+                  "Y": 152.4967
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1889,
+                  "Y": 0.7663
+                },
+                "PreSize": {
+                  "X": 0.34,
+                  "Y": 0.2462
+                },
+                "LeftMargin": 17.0027,
+                "RightMargin": 576.9973,
+                "TopMargin": 22.0033,
+                "BottomMargin": 127.9967,
+                "Tag": 75,
+                "ActionTag": 978307099,
+                "Size": {
+                  "X": 306.0,
+                  "Y": 49.0
+                },
+                "Name": "medpurple",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 1450551945,
+            "Size": {
+              "X": 900.0,
+              "Y": 199.0
+            },
+            "Name": "unlock",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "chapter/lock.png",
+              "Plist" : "plist/test.atlas"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 427.2939,
+              "Y": 108.6753
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3956,
+              "Y": 0.0566
+            },
+            "PreSize": {
+              "X": 0.0602,
+              "Y": 0.0385
+            },
+            "LeftMargin": 394.7939,
+            "RightMargin": 620.2061,
+            "TopMargin": 1774.3247,
+            "BottomMargin": 71.6753,
+            "Tag": 79,
+            "ActionTag": -804087897,
+            "Size": {
+              "X": 65.0,
+              "Y": 74.0
+            },
+            "Name": "levelnum",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 900.0,
+          "Y": 193.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "plist/test.atlas",
+        "plist/test.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

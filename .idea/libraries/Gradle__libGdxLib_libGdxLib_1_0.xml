@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: libGdxLib.libGdxLib-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libGdxLib/build/libs/libGdxLib-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

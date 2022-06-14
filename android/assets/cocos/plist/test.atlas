@@ -1,0 +1,209 @@
+
+test.png
+size: 1451,1696
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chapter/24_24_4
+  rotate: false
+  xy: 482, 7
+  size: 152, 43
+  orig: 152, 43
+  offset: 0, 0
+  index: -1
+chapter/999
+  rotate: false
+  xy: 642, 4
+  size: 95, 46
+  orig: 95, 46
+  offset: 0, 0
+  index: -1
+chapter/back
+  rotate: false
+  xy: 1373, 1620
+  size: 74, 72
+  orig: 74, 72
+  offset: 0, 0
+  index: -1
+chapterItem/back
+  rotate: false
+  xy: 1373, 1620
+  size: 74, 72
+  orig: 74, 72
+  offset: 0, 0
+  index: -1
+chapter/bg_ju
+  rotate: false
+  xy: 1198, 38
+  size: 231, 70
+  orig: 231, 70
+  offset: 0, 0
+  index: -1
+chapter/collect_12
+  rotate: false
+  xy: 923, 20
+  size: 235, 49
+  orig: 235, 49
+  offset: 0, 0
+  index: -1
+chapter/itbg1
+  rotate: false
+  xy: 4, 459
+  size: 900, 198
+  orig: 900, 198
+  offset: 0, 0
+  index: -1
+chapter/itbg2
+  rotate: false
+  xy: 4, 1493
+  size: 900, 199
+  orig: 900, 199
+  offset: 0, 0
+  index: -1
+chapter/itbg3
+  rotate: false
+  xy: 4, 1286
+  size: 900, 199
+  orig: 900, 199
+  offset: 0, 0
+  index: -1
+chapter/itbg4
+  rotate: false
+  xy: 4, 1079
+  size: 900, 199
+  orig: 900, 199
+  offset: 0, 0
+  index: -1
+chapter/itbg5
+  rotate: false
+  xy: 4, 872
+  size: 900, 199
+  orig: 900, 199
+  offset: 0, 0
+  index: -1
+chapter/itbg6
+  rotate: false
+  xy: 4, 665
+  size: 900, 199
+  orig: 900, 199
+  offset: 0, 0
+  index: -1
+chapter/juxing_2_4
+  rotate: false
+  xy: 926, 215
+  size: 347, 101
+  orig: 347, 101
+  offset: 0, 0
+  index: -1
+chapter/level
+  rotate: false
+  xy: 926, 77
+  size: 264, 73
+  orig: 264, 73
+  offset: 0, 0
+  index: -1
+chapter/lock
+  rotate: false
+  xy: 1373, 1538
+  size: 65, 74
+  orig: 65, 74
+  offset: 0, 0
+  index: -1
+chapter/medpurple
+  rotate: false
+  xy: 482, 58
+  size: 306, 49
+  orig: 306, 49
+  offset: 0, 0
+  index: -1
+chapter/shadow
+  rotate: false
+  xy: 1281, 116
+  size: 120, 200
+  orig: 120, 200
+  offset: 0, 0
+  index: -1
+chapter/str
+  rotate: false
+  xy: 1373, 1403
+  size: 64, 58
+  orig: 64, 58
+  offset: 0, 0
+  index: -1
+chapter/to_unlock
+  rotate: false
+  xy: 926, 158
+  size: 293, 49
+  orig: 293, 49
+  offset: 0, 0
+  index: -1
+chapterItem/04_58
+  rotate: false
+  xy: 796, 67
+  size: 119, 40
+  orig: 119, 40
+  offset: 0, 0
+  index: -1
+chapterItem/chapiter_1
+  rotate: false
+  xy: 4, 34
+  size: 470, 73
+  orig: 470, 73
+  offset: 0, 0
+  index: -1
+chapterItem/chapter1
+  rotate: false
+  xy: 912, 1356
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/chapter2
+  rotate: false
+  xy: 4, 115
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/chapter3
+  rotate: false
+  xy: 912, 1012
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/chapter4
+  rotate: false
+  xy: 912, 668
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/chapter5
+  rotate: false
+  xy: 465, 115
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/chapter6
+  rotate: false
+  xy: 926, 324
+  size: 453, 336
+  orig: 453, 336
+  offset: 0, 0
+  index: -1
+chapterItem/star_1
+  rotate: false
+  xy: 1373, 1469
+  size: 68, 61
+  orig: 68, 61
+  offset: 0, 0
+  index: -1
+chapter/strar_5
+  rotate: false
+  xy: 1373, 1469
+  size: 68, 61
+  orig: 68, 61
+  offset: 0, 0
+  index: -1

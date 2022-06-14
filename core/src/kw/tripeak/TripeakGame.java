@@ -9,11 +9,13 @@ import com.kw.gdx.constant.Configuration;
 import kw.tripeak.screen.LoadingScreen;
 
 
-@GameInfo(width = 1920,height = 1080)
+@GameInfo(height = 1920,width = 1080)
 public class TripeakGame extends BaseGame {
     @Override
     protected void loadingView() {
         super.loadingView();
+        Configuration.scale =0.2F;
+        Configuration.device_state = Configuration.DeviceState.poor;
         Constant.viewColor.set(35.0F/255F,36.0F/255F,51.0F/255F,1);
         setScreen(new LoadingScreen(this));
     }
