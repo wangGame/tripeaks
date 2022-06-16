@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-import com.kw.gdx.audio.Asset;
+import com.kw.gdx.asset.Asset;
 import com.kw.gdx.listener.ButtonListener;
 import com.kw.gdx.utils.ImageUtils;
 

@@ -2,6 +2,7 @@ package com.kw.gdx;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.CpuPolygonSpriteBatch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -60,8 +61,11 @@ public class BaseGame extends Game {
 
     @Override
     public void render() {
-        ScreenUtils.clearScreen(Constant.viewColor.r, Constant.viewColor.g, Constant.viewColor.b, 1f);
+//        ScreenUtils.clearScreen(Constant.viewColor.r, Constant.viewColor.g, Constant.viewColor.b, 1f);
+        Gdx.gl.glClearColor(0.1f,0.4f,0.3f,1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
         super.render();
+
     }
 
     public Viewport getStageViewport() {

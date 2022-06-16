@@ -6,7 +6,6 @@ import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.kw.gdx.view.dialog.base.BaseDialog;
 import com.kw.gdx.listener.ButtonListener;
 
-import kw.tripeak.constant.LevelConfig;
 import kw.tripeak.pref.TripeakPreferece;
 
 public class SuccessDialog extends BaseDialog {

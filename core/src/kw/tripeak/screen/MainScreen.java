@@ -12,9 +12,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.SnapshotArray;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.ads.Constant;
-import com.kw.gdx.annotation.ScreenResource;
+
+
+import com.kw.gdx.constant.Constant;
 import com.kw.gdx.listener.OrdinaryButtonListener;
+import com.kw.gdx.resource.annotation.ScreenResource;
 import com.kw.gdx.screen.BaseScreen;
 
 import kw.tripeak.dialog.SettingDialog;

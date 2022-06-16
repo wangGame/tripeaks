@@ -24,6 +24,7 @@ package com.anrutils.example;
  */
 
 
+import com.badlogic.gdx.Gdx;
 import com.kw.gdx.utils.log.NLog;
 
 /**
@@ -31,23 +32,21 @@ import com.kw.gdx.utils.log.NLog;
  */
 @SuppressWarnings("UnusedReturnValue")
 public class ANRWatchDog extends Thread {
-
+    private Thread targetThread;
+    private ANRListener _anrListener = DEFAULT_ANR_LISTENER;
+    private ANRInterceptor _anrInterceptor = DEFAULT_ANR_INTERCEPTOR;
+    private InterruptionListener _interruptionListener = DEFAULT_INTERRUPTION_LISTENER;
+    private final int _timeoutInterval;
+    private String _namePrefix = "";
+    private boolean _logThreadsWithoutStackTrace = false;
+    private volatile long _tick = 0;
+    private volatile boolean _reported = false;
+    private static final int DEFAULT_ANR_TIMEOUT = 5000;
     public interface ANRListener {
-        /**
-         * Called when an ANR is detected.
-         *
-         * @param error The error describing the ANR.
-         */
-        void onAppNotResponding(ANRError error);
+        void onAppNotResponding(ANRError error) ;
     }
 
     public interface ANRInterceptor {
-        /**
-         * Called when main thread has froze more time than defined by the timeout.
-         *
-         * @param duration The minimum time (in ms) the main thread has been frozen (may be more).
-         * @return 0 or negative if the ANR should be reported immediately. A positive number of ms to postpone the reporting.
-         */
         long intercept(long duration);
     }
 
@@ -55,17 +54,21 @@ public class ANRWatchDog extends Thread {
         void onInterrupted(InterruptedException exception);
     }
 
-    private static final int DEFAULT_ANR_TIMEOUT = 5000;
-
     private static final ANRListener DEFAULT_ANR_LISTENER = new ANRListener() {
         @Override public void onAppNotResponding(ANRError error) {
-            throw error;
+            try {
+                throw error;
+            } catch (ANRError anrError) {
+                anrError.printStackTrace();
+            }
         }
     };
 
     private static final ANRInterceptor DEFAULT_ANR_INTERCEPTOR = new ANRInterceptor() {
         @Override public long intercept(long duration) {
-            return 0;
+            System.out.println("intercet duration :"+duration);
+//            return duration;
+            return -1;
         }
     };
 
@@ -75,25 +78,11 @@ public class ANRWatchDog extends Thread {
         }
     };
 
-    private ANRListener _anrListener = DEFAULT_ANR_LISTENER;
-    private ANRInterceptor _anrInterceptor = DEFAULT_ANR_INTERCEPTOR;
-    private InterruptionListener _interruptionListener = DEFAULT_INTERRUPTION_LISTENER;
-
-    
-    private final int _timeoutInterval;
-
-    private String _namePrefix = "";
-    private boolean _logThreadsWithoutStackTrace = false;
-    private boolean _ignoreDebugger = false;
-
-    private volatile long _tick = 0;
-    private volatile boolean _reported = false;
-
-    private final Runnable _ticker = new Runnable() {
-        @Override public void run() {
-
-        }
-    };
+//    private final Runnable _ticker = new Runnable() {
+//        @Override public void run() {
+//
+//        }
+//    };
 
     /**
      * Constructs a watchdog that checks the ui thread every {@value #DEFAULT_ANR_TIMEOUT} milliseconds
@@ -102,16 +91,10 @@ public class ANRWatchDog extends Thread {
         this(DEFAULT_ANR_TIMEOUT);
     }
 
-    /**
-     * Constructs a watchdog that checks the ui thread every given interval
-     *
-     * @param timeoutInterval The interval, in milliseconds, between to checks of the UI thread.
-     *                        It is therefore the maximum time the UI may freeze before being reported as ANR.
-     */
-    private Thread targetThread;
     public ANRWatchDog(int timeoutInterval) {
         super();
         _timeoutInterval = timeoutInterval;
+        //得到的是调用的那个线程
         targetThread = Thread.currentThread();
     }
 
@@ -238,8 +221,12 @@ public class ANRWatchDog extends Thread {
      */
   
     public ANRWatchDog setIgnoreDebugger(boolean ignoreDebugger) {
-        _ignoreDebugger = ignoreDebugger;
         return this;
+    }
+
+    public void reset(){
+        _tick = 0;
+        _reported = false;
     }
 
     @SuppressWarnings("NonAtomicOperationOnVolatileField")
@@ -249,13 +236,15 @@ public class ANRWatchDog extends Thread {
 
         long interval = _timeoutInterval;
         while (!isInterrupted()) {
-
+            //开始先加值，让结果不为0，使用ui线程去恢复值
             _tick += interval;
-
-
+            Gdx.app.postRunnable(()->{
+                reset();
+            });
             try {
                 Thread.sleep(interval);
             } catch (InterruptedException e) {
+                // interput exception
                 _interruptionListener.onInterrupted(e);
                 return ;
             }
@@ -263,13 +252,10 @@ public class ANRWatchDog extends Thread {
             // If the main thread has not handled _ticker, it is blocked. ANR.
             if (_tick != 0 && !_reported) {
                 //noinspection ConstantConditions
-
-
                 interval = _anrInterceptor.intercept(_tick);
                 if (interval > 0) {
                     continue;
                 }
-
                 final ANRError error;
                 if (_namePrefix != null) {
                     error = ANRError.New(_tick, _namePrefix, _logThreadsWithoutStackTrace,targetThread);
@@ -280,9 +266,6 @@ public class ANRWatchDog extends Thread {
                 interval = _timeoutInterval;
                 _reported = true;
             }
-            _tick = 0;
-            _reported = false;
         }
     }
-
 }

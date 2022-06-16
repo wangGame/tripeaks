@@ -12,21 +12,25 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Queue;
 import com.kw.gdx.BaseGame;
-import com.kw.gdx.annotation.ScreenResource;
-import com.kw.gdx.dialog.base.BaseDialog;
+
 import com.kw.gdx.listener.ButtonListener;
 import com.kw.gdx.listener.OrdinaryButtonListener;
+import com.kw.gdx.resource.annotation.ScreenResource;
 import com.kw.gdx.screen.BaseScreen;
+import com.kw.gdx.view.dialog.base.BaseDialog;
+
 import java.util.ArrayList;
 
 import kw.tripeak.data.Board;
 import kw.tripeak.data.GameData;
 import kw.tripeak.data.PeakBean;
+
+import kw.tripeak.dialog.FailedDialog;
 import kw.tripeak.dialog.SettingDialog;
 import kw.tripeak.dialog.SuccessDialog;
 import kw.tripeak.group.CardGroup;
-import kw.tripeak.dialog.FailedDialog;
 import kw.tripeak.pref.TripeakPreferece;
+
 
 @ScreenResource("cocos/GameScreen.json")
 public class GameScreen extends BaseScreen {

@@ -14,7 +14,7 @@ import java.util.TreeMap;
  * of the exception. Each "Caused by" is the stack trace of a running thread. Note that the main
  * thread always comes first.
  */
-public class ANRError extends Error {
+public class ANRError extends Exception {
 
     private static class $ implements Serializable {
         private final String _name;
@@ -73,19 +73,21 @@ public class ANRError extends Error {
             }
         });
 
-        for (Map.Entry<Thread, StackTraceElement[]> entry : Thread.getAllStackTraces().entrySet())
+        for (Map.Entry<Thread, StackTraceElement[]> entry : Thread.getAllStackTraces().entrySet()) {
+            System.out.println(entry.getKey().getName());
             if (
                     entry.getKey() == mainThread
-                ||  (
-                        entry.getKey().getName().startsWith(prefix)
-                    &&  (
-                            logThreadsWithoutStackTrace
-                        ||
-                            entry.getValue().length > 0
-                        )
+                            || (
+                            entry.getKey().getName().startsWith(prefix)
+                                    && (
+                                    logThreadsWithoutStackTrace
+                                            ||
+                                            entry.getValue().length > 0
+                            )
                     )
-                )
+            )
                 stackTraces.put(entry.getKey(), entry.getValue());
+        }
 
         // Sometimes main is not returned in getAllStackTraces() - ensure that we list it
         if (!stackTraces.containsKey(mainThread)) {
