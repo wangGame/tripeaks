@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: D__github_tripeaks_desktop_libs_gdx_com_tool_tools_jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/desktop/libs/gdx-com.tool.tools.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

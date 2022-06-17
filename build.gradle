@@ -9,7 +9,6 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.4'
-//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
 
@@ -44,16 +43,11 @@ project(":desktop") {
 
     dependencies {
         implementation project(":core")
-//        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-//        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-//        api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     }
 }
 
 project(":android") {
     apply plugin: "android"
-//    apply plugin: "kotlin-android"
-
     configurations { natives }
 
     dependencies {
@@ -64,28 +58,10 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
         api "com.badlogicgames.ashley:ashley:$ashleyVersion"
-//        api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     }
 }
 
 project(":core") {
     apply plugin: "java"
 
-    dependencies {
-//        implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
-//        implementation "com.badlogicgames.ashley:ashley:$ashleyVersion"
-//        api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-
-//        api "io.github.libktx:ktx-app:$ktxVersion"
-//        api "io.github.libktx:ktx-ashley:$ktxVersion"
-//        api "io.github.libktx:ktx-assets:$ktxVersion"
-//        api "io.github.libktx:ktx-collections:$ktxVersion"
-//        api "io.github.libktx:ktx-graphics:$ktxVersion"
-//        api "io.github.libktx:ktx-log:$ktxVersion"
-//        api "io.github.libktx:ktx-inject:$ktxVersion"
-//        api "io.github.libktx:ktx-math:$ktxVersion"
-//        api "io.github.libktx:ktx-preferences:$ktxVersion"
-//        api "io.github.libktx:ktx-scene2d:$ktxVersion"
-//        api "io.github.libktx:ktx-style:$ktxVersion"
-    }
 }

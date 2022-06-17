@@ -1,2 +1,0 @@
-# Referenced at D:\github\tripeaks\android\build\intermediates\merged_manifests\release\AndroidManifest.xml:22
--keep class ogz.tripeaks.AndroidLauncher { <init>(); }
