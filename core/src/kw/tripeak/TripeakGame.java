@@ -8,6 +8,7 @@ import com.kw.gdx.BaseGame;
 import com.kw.gdx.constant.Constant;
 import com.kw.gdx.resource.annotation.GameInfo;
 import com.kw.gdx.constant.Configuration;
+import com.kw.gdx.resource.i18.I18Resource;
 import com.kw.gdx.utils.Assert;
 import com.kw.gdx.utils.log.NLog;
 
@@ -70,10 +71,16 @@ public class TripeakGame extends BaseGame {
         Configuration.scale =0.2F;
         Configuration.device_state = Configuration.DeviceState.poor;
         Constant.viewColor.set(35.0F/255F,36.0F/255F,51.0F/255F,1);
-        setScreen(new LoadingScreen(this));
+//        setScreen(new LoadingScreen(this));
 
         ///指定鼠标
         Gdx.graphics.setCursor(Gdx.graphics.newCursor(new Pixmap(Gdx.files.internal("cursor.png")), 0, 0));
+
+
+        I18Resource i18Resource = new I18Resource();
+        i18Resource.loadResource("i18n/Bundle");
+        String skinKey = i18Resource.findValue("skinKey");
+        System.out.println(skinKey);
     }
 
     @Override

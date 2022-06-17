@@ -13,7 +13,7 @@ public class I18Resource {
     private I18NBundle bundle;
     public void loadResource(String path){
         FileHandle internal = Gdx.files.internal(path);
-        bundle = I18NBundle.createBundle(internal, Locale.US);
+        bundle = I18NBundle.createBundle(internal,Locale.CHINA);
     }
 
     public String findValue(String key){

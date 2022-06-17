@@ -41,9 +41,6 @@ project(":desktop") {
     apply plugin: "java"
 
 
-    dependencies {
-        implementation project(":core")
-    }
 }
 
 project(":android") {

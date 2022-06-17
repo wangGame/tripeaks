@@ -295,6 +295,7 @@ public class I18NBundle {
 	private static I18NBundle loadBundleChain (FileHandle baseFileHandle, String encoding, List<Locale> candidateLocales,
 		int candidateIndex, I18NBundle baseBundle) {
 		Locale targetLocale = candidateLocales.get(candidateIndex);
+		System.out.println(targetLocale);
 		I18NBundle parent = null;
 		if (candidateIndex != candidateLocales.size() - 1) {
 			// Load recursively the parent having the next candidate locale
