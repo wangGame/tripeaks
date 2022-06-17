@@ -34,5 +34,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: gdx-1.9.9" level="project" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
+    <orderEntry type="module" module-name="libGdxLib" exported="" />
+    <orderEntry type="module" module-name="libGdxLib" exported="" />
   </component>
 </module>

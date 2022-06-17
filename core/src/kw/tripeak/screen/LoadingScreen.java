@@ -22,7 +22,7 @@ public class LoadingScreen extends BaseScreen {
         stage.addAction(Actions.delay(1,Actions.run(()->{
             FontResource.getInstance().getRes();
             Asset.getAsset().getResource(FontResource.class);
-//            setScreen(MainScreen.class);
+            setScreen(MainScreen.class);
         })));
 
 

@@ -43,5 +43,9 @@
     <orderEntry type="module" module-name="libGdxLib" exported="" />
     <orderEntry type="module" module-name="core" exported="" />
     <orderEntry type="module" module-name="libGdxLib" exported="" />
+    <orderEntry type="module" module-name="core" exported="" />
+    <orderEntry type="module" module-name="libGdxLib" exported="" />
+    <orderEntry type="module" module-name="core" exported="" />
+    <orderEntry type="module" module-name="libGdxLib" exported="" />
   </component>
 </module>

@@ -249,6 +249,15 @@ public class ANRWatchDog extends Thread {
                 return ;
             }
 
+//            StackTraceElement[] stackTrace = targetThread.getStackTrace();
+//            System.out.println("---------- split ---------");
+//            for (int i = 0; i < stackTrace.length; i++) {
+//                StackTraceElement stackTraceElement = stackTrace[i];
+//                final String fullClassName = stackTraceElement.getClassName();
+//                final String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
+//                final String method = stackTraceElement.getMethodName();
+//                System.out.println(className + "." + method);
+//            }
             // If the main thread has not handled _ticker, it is blocked. ANR.
             if (_tick != 0 && !_reported) {
                 //noinspection ConstantConditions

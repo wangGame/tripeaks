@@ -61,11 +61,11 @@ public class TripeakGame extends BaseGame {
         anrWatchDog.start();
 
         String mas = null;
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         Assert.checkInfo(mas != null,"mas is null");
         Configuration.scale =0.2F;
         Configuration.device_state = Configuration.DeviceState.poor;
