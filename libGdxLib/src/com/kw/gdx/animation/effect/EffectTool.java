@@ -5,15 +5,16 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.ParticleEffectLoader;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.utils.Cullable;
 import com.kw.gdx.asset.Asset;
 
 public class EffectTool extends Actor {
     private ParticleEffect effect;
     private String path;
     private AssetManager assetamnagerinstance;
-    private float h;
-    private float w;
+    private Rectangle rectangle = new Rectangle();
 
     public EffectTool(String path){
         this.path = path;
@@ -73,6 +74,10 @@ public class EffectTool extends Actor {
         effect.setPosition(x,y);
     }
 
+    public void setRectangle(float startX,float startY,float rwidth,float rheight) {
+        this.rectangle.set(startX,startY,rwidth,rheight);
+    }
+
     private boolean flag = false;
 
     public void setFlag(boolean flag) {
@@ -85,8 +90,9 @@ public class EffectTool extends Actor {
         int blendSrcFunc = batch.getBlendSrcFunc();
         int blendDstFunc = batch.getBlendDstFunc();
         if (flag) {
-            if (clipBegin(0, 0, w, h)) {
+            if (clipBegin(rectangle.x, rectangle.y,rectangle.width, rectangle.height)) {
                 effect.draw(batch, Gdx.graphics.getDeltaTime());
+                batch.flush();
                 clipEnd();
             }
         }else {

@@ -16,6 +16,11 @@ public class I18Resource {
         bundle = I18NBundle.createBundle(internal,Locale.CHINA);
     }
 
+    public static void main(String[] args) {
+        I18Resource resource = new I18Resource();
+        resource.loadResource("i8n/Bundle.properties");
+    }
+
     public String findValue(String key){
         if (bundle == null) {
             throw new RuntimeException();
@@ -23,7 +28,7 @@ public class I18Resource {
         return bundle.get(key);
     }
 
-    public String findValue(String key,String... v){
+    public String findValue(String key,Object... v){
         if (bundle == null) {
             throw new RuntimeException();
         }

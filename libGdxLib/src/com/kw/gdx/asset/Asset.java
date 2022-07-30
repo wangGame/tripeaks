@@ -82,22 +82,10 @@ public class Asset implements Disposable {
                     I18BundleAnnotation i18BundleAnnotation = (I18BundleAnnotation) annotation;
                     assetManager.load(i18BundleAnnotation.value(), I18NBundle.class);
                 }else if (annotation instanceof AssetResource){
-//                    AssetResource resource = (AssetResource)annotation;
-//
-//                    if (!declaredField.isAccessible()) {
-//                        try {
-//                            declaredField.setAccessible(true);
-//                        } catch (AccessControlException ex) {
-//                            throw new GdxRuntimeException(String.format("Field %s cannot be made accessible", field.getName()));
-//                        }
-//                    }
-//
-//                    Class<?> assetType = declaredField.getType();
-//                    String fileName;
-////                    Asset asset = annotation.getAnnotation(Asset.class);
-//                    fileName = pathPrepend + resource.value();
-//                    parameter = findParameter(assetContainer, fields, asset.parameter(), field.getName());
-
+                    AssetResource resource = (AssetResource)annotation;
+                    String value = resource.value();
+                    Class<?> type = declaredField.getType();
+                    assetManager.load(value,type);
                 }
             }
         }
@@ -127,6 +115,25 @@ public class Asset implements Disposable {
                     I18BundleAnnotation i18BundleAnnotation = (I18BundleAnnotation) annotation;
                     try {
                         declaredField.set(ob,assetManager.get(i18BundleAnnotation.value(), I18NBundle.class));
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                }else if (annotation instanceof AssetResource){
+                    AssetResource resource = (AssetResource)annotation;
+                    String value = resource.value();
+                    Class<?> type = declaredField.getType();
+                    assetManager.load(value,type);
+
+                    if (!declaredField.isAccessible()) {
+                        try {
+                            declaredField.setAccessible(true);
+                        } catch (AccessControlException ex) {
+                            throw new GdxRuntimeException(String.format("Field %s cannot be made accessible", declaredField.getName()));
+                        }
+                    }
+
+                    try {
+                        declaredField.set(ob,assetManager.get(value,type));
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }

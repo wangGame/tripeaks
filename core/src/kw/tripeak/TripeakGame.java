@@ -78,8 +78,8 @@ public class TripeakGame extends BaseGame {
 
 
         I18Resource i18Resource = new I18Resource();
-        i18Resource.loadResource("i18n/Bundle");
-        String skinKey = i18Resource.findValue("skinKey");
+        i18Resource.loadResource("i8n/Bundle");
+        String skinKey = i18Resource.findValue("fromStack",9);
         System.out.println(skinKey);
     }
 
